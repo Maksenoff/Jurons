@@ -1,0 +1,57 @@
+body{
+    background-image: url("../img/fond.jpg");
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.tableau{
+    display: flex;
+    flex-direction: column;     
+    color: white;
+    margin-left: 4%;    
+    border-radius: 5px; 
+    width: 92%;        
+    margin-top: 39px;   
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+tr{
+    height: 45px;    
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+
+.tr-legend{
+    border-bottom: solid white 1px;
+    margin-bottom: 1em;
+
+}
+
+.th{
+    text-align: center;       
+    width: 25%;
+    padding-top: 9px;
+    
+}
+
+.th-id{
+    padding-right: 6%;
+}
+
+.th-nom{
+    padding-right: 2%;
+}
+
+.th-balance{
+    padding-left: 2%;
+}
+
+.th-date{
+    padding-left: 6%;
+}
+
+.deroulant{    
+    color: white;
+}
