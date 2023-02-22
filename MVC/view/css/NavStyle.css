@@ -109,7 +109,7 @@
 
 
 /*----Animated Button----*/
-  .btn {
+  .btnav {
     width: 6.5em;
     height: 2.3em;
     margin: 0.5em;
@@ -125,11 +125,11 @@
     overflow: hidden;
    }
    
-   button:hover {
+   .btnav:hover {
     color: black;
    }
    
-   button:after {
+   .btnav:after {
     content: "";
     background: white;
     position: absolute;
@@ -142,7 +142,7 @@
     transition: all 0.5s;
    }
    
-   button:hover:after {
+   .btnav:hover:after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
