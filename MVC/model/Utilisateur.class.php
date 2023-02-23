@@ -10,12 +10,12 @@ class Utilisateur extends Personne
     private string $password;
     private float $solde;
     private int $id_utilisateur;
-    private Profil $_profil;
+    private int $_profil;
     // La classe profil n existe pas encore
     
 
     //Constructeur d'initialisation
-    public function __construct(string $nom, string $prenom, string $mail, string $loginUser, string $password, float $solde, Profil $_profil )
+    public function __construct(string $nom, string $prenom, string $mail, string $loginUser, string $password, float $solde, int $_profil )
     {
         $this->nom = $nom;
         $this->prenom = $prenom;
@@ -29,7 +29,7 @@ class Utilisateur extends Personne
     //===================== Méthodes =====================
 
     public function affiche(){
-        echo "Je suis là pour que la fonction abstraite fonctionne \n". ucfirst($this->prenom). " ". strtoupper($this->nom). PHP_EOL. "grade: ". $this->_profil->getGrade();
+        echo "Je suis là pour que la fonction abstraite fonctionne \n". ucfirst($this->prenom). " ". strtoupper($this->nom). PHP_EOL. "grade: ". $this->_profil;
     }
 
     //===================== Méthodes d'accès =====================
@@ -96,25 +96,7 @@ class Utilisateur extends Personne
         return $this;
     }
 
-    /**
-     * Get the value of _profil
-     */ 
-    public function get_profil()
-    {
-        return $this->_profil;
-    }
-
-    /**
-     * Set the value of _profil
-     *
-     * @return  self
-     */ 
-    public function set_profil($_profil)
-    {
-        $this->_profil = $_profil;
-
-        return $this;
-    }
+  
 
     /**
      * Get the value of loginUser
@@ -152,6 +134,26 @@ class Utilisateur extends Personne
     public function setId_utilisateur($id_utilisateur)
     {
         $this->id_utilisateur = $id_utilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of _profil
+     */ 
+    public function get_profil()
+    {
+        return $this->_profil;
+    }
+
+    /**
+     * Set the value of _profil
+     *
+     * @return  self
+     */ 
+    public function set_profil($_profil)
+    {
+        $this->_profil = $_profil;
 
         return $this;
     }
