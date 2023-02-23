@@ -4,31 +4,16 @@ body{
     background-size: cover; 
 }
 
-section{
-    height: 40em;
-}
-
 .tableau{
     display: flex;
     flex-direction: column;     
     color: white;
     margin-left: 4%;    
     border-radius: 5px; 
-    width: 92%; 
-    height: 40em;       
+    width: 92%;        
     margin-top: 39px;   
     background-color: rgba(0, 0, 0, 0.726);
-    
 }
-
-.scroller {
-    width: 92%;
-    height: 40em;
-    overflow-y: scroll;
-    scrollbar-color: black grey;
-    scrollbar-width: thin;
-  }
-  
 
 tr{
     height: 45px;    

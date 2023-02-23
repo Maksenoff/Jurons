@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="./css/NavStyle.css">
-  <link type="text/css" rel="stylesheet" href="./css/HistoriqueStyle.css">
+  <link type="text/css" rel="stylesheet" href="./css/historique.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
@@ -36,18 +36,18 @@
           <a class="nav-link active text-light" aria-current="page" href="#">Statistiques</a>
           <a class="nav-link active text-light" aria-current="page" href="#">Historique</a>
         </div>
-        <a href="../view/login.php"><button class="btnav"> Connexion
-        </button></a>
-        <a href="../view/SignUp.php"><button class="btnav"> Inscription
-        </button></a>
+        <button class="btnav"> Login
+        </button>
+        <button class="btnav"> Sign Up
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- tableau -->
 
-  <section >
-    <table class="tableau scroller">
+  <section>
+    <table class="tableau ">
 
 
       <thead>
@@ -65,130 +65,128 @@
         <tr>
           <th class="th th-id">01</th>
           <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
+          <th class="th th-balance">
+            <div class="btn-group">
+              <button type="button" class="deroulant btn dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropdownbalance">
+                Thibaut
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+              </ul>
+            </div>
           </th>
-          <th class="th th-date">Date          
+          <th class="th th-date">
+          <div class="btn-group">
+              <button type="button" class="deroulant btn dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropdowndate">
+                Date
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+              </ul>
+            </div>
           </th>
-        </tr>        
+        </tr>
+
+        <tr>
+          <th class="th th-id">01</th>
+          <th class="th th-nom">Baptiste</th>
+          <th class="th th-balance">
+            <div class="btn-group">
+              <button type="button" class="deroulant btn dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropdownbalance">
+                Thibaut
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+              </ul>
+            </div>
+          </th>
+          <th class="th th-date">
+          <div class="btn-group">
+              <button type="button" class="deroulant btn dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropdowndate">
+                Date
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+              </ul>
+            </div>
+          </th>
+        </tr>
+
+        <tr>
+          <th class="th th-id">01</th>
+          <th class="th th-nom">Baptiste</th>
+          <th class="th th-balance">
+            <div class="btn-group">
+              <button type="button" class="deroulant btn dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropdownbalance">
+                Thibaut
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+              </ul>
+            </div>
+          </th>
+          <th class="th th-date">
+          <div class="btn-group">
+              <button type="button" class="deroulant btn dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropdowndate">
+                Date
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+              </ul>
+            </div>
+          </th>
+        </tr>
+
+        <tr>
+          <th class="th th-id">01</th>
+          <th class="th th-nom">Baptiste</th>
+          <th class="th th-balance">
+            <div class="btn-group">
+              <button type="button" class="deroulant btn dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropdownbalance">
+                Thibaut
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+              </ul>
+            </div>
+          </th>
+          <th class="th th-date">
+          <div class="btn-group">
+              <button type="button" class="deroulant btn dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" id="dropdowndate">
+                Date
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+                <li><button class="dropdown-item" type="button">exemple</button></li>
+              </ul>
+            </div>
+          </th>
+        </tr>
         
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
 
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-
-
-
-        </tbody>
-  </section>
 
 
 
@@ -206,7 +204,9 @@
     ?>
 
 
- 
+      </tbody>
+  </section>
+
 
 
 

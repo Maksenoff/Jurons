@@ -6,21 +6,20 @@ class Utilisateur extends Personne
 {
     //on définit les attributs de la classe
     private string $mail;
-    private string $loginUser;
+    private string $login;
     private string $password;
     private float $solde;
-    private int $id_utilisateur;
-    private int $_profil;
+    private Profil $_profil;
     // La classe profil n existe pas encore
     
 
     //Constructeur d'initialisation
-    public function __construct(string $nom, string $prenom, string $mail, string $loginUser, string $password, float $solde, int $_profil )
+    public function __construct(string $nom, string $prenom, string $mail, string $login, string $password, float $solde, Profil $_profil )
     {
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->mail = $mail;
-        $this->loginUser = $loginUser;
+        $this->login = $login;
         $this->password = $password;
         $this->solde = $solde;
         $this->_profil = $_profil;
@@ -29,7 +28,7 @@ class Utilisateur extends Personne
     //===================== Méthodes =====================
 
     public function affiche(){
-        echo "Je suis là pour que la fonction abstraite fonctionne \n". ucfirst($this->prenom). " ". strtoupper($this->nom). PHP_EOL. "grade: ". $this->_profil;
+        echo "Je suis là pour que la fonction abstraite fonctionne \n". ucfirst($this->prenom). " ". strtoupper($this->nom). PHP_EOL. "grade: ". $this->_profil->getGrade();
     }
 
     //===================== Méthodes d'accès =====================
@@ -54,7 +53,25 @@ class Utilisateur extends Personne
         return $this;
     }
 
-    
+    /**
+     * Get the value of login
+     */ 
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * Set the value of login
+     *
+     * @return  self
+     */ 
+    public function setLogin($login)
+    {
+        $this->login = $login;
+
+        return $this;
+    }
 
     /**
      * Get the value of password
@@ -92,48 +109,6 @@ class Utilisateur extends Personne
     public function setSolde($solde)
     {
         $this->solde = $solde;
-
-        return $this;
-    }
-
-  
-
-    /**
-     * Get the value of loginUser
-     */ 
-    public function getLoginUser()
-    {
-        return $this->loginUser;
-    }
-
-    /**
-     * Set the value of loginUser
-     *
-     * @return  self
-     */ 
-    public function setLoginUser($loginUser)
-    {
-        $this->loginUser = $loginUser;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of id_utilisateur
-     */ 
-    public function getId_utilisateur()
-    {
-        return $this->id_utilisateur;
-    }
-
-    /**
-     * Set the value of id_utilisateur
-     *
-     * @return  self
-     */ 
-    public function setId_utilisateur($id_utilisateur)
-    {
-        $this->id_utilisateur = $id_utilisateur;
 
         return $this;
     }

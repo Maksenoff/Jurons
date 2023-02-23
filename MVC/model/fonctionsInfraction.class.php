@@ -1,8 +1,8 @@
 <?php 
 
-class Infraction {
+// class Infraction {
 
-public function createInfraction() {
+function createInfraction() {
     //Chaine de connexion à la base de donnée
     $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
@@ -17,12 +17,12 @@ public function createInfraction() {
 }
 
 
-public function updateInfraction( $id_infraction, $choixL, $oldLibelle, $newLibelle, $choixF, $oldTarif, $newTarif) {
+function updateInfraction( $id_infraction, $oldLibelle, $newLibelle) {
     $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
     
 
-    $sql=("UPDATE infraction SET $choixL = '$newLibelle' WHERE $choixL = '$oldLibelle' AND SET $choixF = '$newTarif' WHERE $choixF = '$oldTarif' AND ID = '$id_infraction'");
+    $sql=("UPDATE infraction SET libelle = '$newLibelle' WHERE libelle = '$oldLibelle'  AND id_infraction = '$id_infraction'");
 
 
     $stmt= $bdd->prepare($sql);
@@ -33,7 +33,7 @@ public function updateInfraction( $id_infraction, $choixL, $oldLibelle, $newLibe
 }
 
 
-public function deleteInfraction($id_infraction) {
+function deleteInfraction($id_infraction) {
     $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
     
@@ -47,7 +47,7 @@ public function deleteInfraction($id_infraction) {
 }
 
 
-public function historique() {
+function historique() {
 
         $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         
@@ -60,7 +60,7 @@ public function historique() {
     
 }
 
-public function statCamenbert() {
+function statCamenbert() {
 
     $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         
@@ -72,4 +72,4 @@ public function statCamenbert() {
     return $user;
 }
 
-}
+// }
