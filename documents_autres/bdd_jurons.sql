@@ -35,7 +35,7 @@ CREATE TABLE Utilisateur(
         Nom            Varchar (50) NOT NULL ,
         Prenom         Varchar (50) NOT NULL ,
         mail           Varchar (50) NOT NULL ,
-        login          Varchar (50) NOT NULL ,
+        loginUser          Varchar (50) NOT NULL ,
         mdp            Varchar (50) NOT NULL ,
         solde          Float NOT NULL ,
         id_profil      Int NOT NULL

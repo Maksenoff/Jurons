@@ -1,8 +1,7 @@
 <?php 
 
-class Infraction {
 
-public function createInfraction() {
+function createInfraction() {
     //Chaine de connexion à la base de donnée
     $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
@@ -17,7 +16,7 @@ public function createInfraction() {
 }
 
 
-public function updateInfraction( $id_infraction, $choixL, $oldLibelle, $newLibelle, $choixF, $oldTarif, $newTarif) {
+function updateInfraction( $id_infraction, $choixL, $oldLibelle, $newLibelle, $choixF, $oldTarif, $newTarif) {
     $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
     
@@ -33,7 +32,7 @@ public function updateInfraction( $id_infraction, $choixL, $oldLibelle, $newLibe
 }
 
 
-public function deleteInfraction($id_infraction) {
+function deleteInfraction($id_infraction) {
     $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
     
@@ -47,7 +46,7 @@ public function deleteInfraction($id_infraction) {
 }
 
 
-public function historique() {
+function historique() {
 
         $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         
@@ -60,16 +59,14 @@ public function historique() {
     
 }
 
-public function statCamenbert() {
+function statCamenbert() {
 
     $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         
-    $sql = "SELECT prenom, solde FROM Utilisateur GROUP BY prenom" ;
+    $sql = "SELECT prenom, solde FROM Utilisateur";
 
     $stmt= $bdd->prepare($sql);
     $stmt ->execute();
     $user= $stmt->fetchAll();
     return $user;
-}
-
 }

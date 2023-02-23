@@ -1,11 +1,10 @@
 <?php
 
-include_once "../model/fonctionsInfraction.class.php";
+include "../modele/fonctionsInfraction.php";
 
 session_start();
 
-// $_SESSION['liststag'] = ;
-// on attend le read stagiaire
+$status = createInfraction();
 
 
-header("Location: ../view/Infraction.php");
+header("Location: ../view/infractionView.php");
