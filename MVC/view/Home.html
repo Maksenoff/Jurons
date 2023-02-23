@@ -4,31 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="./css/NavStyle.css">
-    
-    <link rel="stylesheet" href="../view/css/infractionStyle.css">
+    <link type="text/css" rel="stylesheet" href="../View/css/NavStyle.css">
+    <link type="text/css" rel="stylesheet" href="../View/css/HomeStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
-<!-- ///////////////////////// Nav bar Top //////////////////////////////////////////////-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand playfaire text-light" href="../View/Nav.html"><h2>La Boîte à Jurons</h2></a>
+              <a class="navbar-brand playfaire text-light" href="../View/Home.html"><h2>La Boîte à Jurons</h2></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav menu">
-                  <a class="nav-link active text-light" aria-current="page" href="#">Infractions</a>
-                  <a class="nav-link active text-light" aria-current="page" href="#">Statistiques</a>
-                  <a class="nav-link active text-light" aria-current="page" href="#">Historique</a>
-                </div>
+              <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
                 <button class="btnav"> Login
                 </button>
                 <button class="btnav"> Sign Up
@@ -37,87 +29,126 @@
             </div>
           </nav>
 
-<!-- ///////////////////////// Tableau //////////////////////////////////////////////-->
-    <?php session_start(); ?>
 
-<table class = "radioGaga">
-    
-      <tr>
 
-      <th id="pj"> <input type="radio" id="pj" value="pj" name="inf"> 
-      <label for="" >Petit Juron</label> </th>
 
-      <th> <input type="radio" id="gj" value="gj" name="inf"> 
-      <label for="" >Gros Juron</label> </th>
-
-      <th> <input type="radio" id="ge" value="ge" name="inf"> 
-      <label for="">Geste</label> </th>
+<div class="d-flex justify-content-evenly align-items-center ptop">
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                  <h1 class="d-flex justify-content-center align-items-center">?</h1>                  
+                </div>
+              </div>
+              <div class="front">
       
-      <th> <input type="radio" id="ro" value="ro" name="inf"> 
-      <label for="">Rôt</label> </th>
-
-
-        <th id="re"> <label for="" name="nb">Retard</label> 
-        <select name="nb" id="nb">
-
-        <option value=0>0</option>
-        <option value=5>5</option>
-        <option value=10>10</option>
-        <option value=15>15</option>
-        <option value=20>20</option>
-        <option value=25>25</option>
-        <option value=30>30</option>
-        <option value=35>35</option>
-        <option value=40>40</option>
-        <option value=45>45</option>
-        <option value=50>50</option>
-        <option value=55>55</option>
-        <option value=60>60</option>
-
-        </select> </th>
-
-        <th> 
-
-         <!-- <input type="submit" id="balance" value="Valider" name="balance"> -->
-        <div id="holder">
-
-                <div class="button">
-
-                        <p class="btnText">Valider</p>
-
-                <div class="btnTwo">
-
-                        <p class="btnText2">✓</p>
+                <div class="img">
+                  <div class="circle">
+                  </div>
+                  <div class="circle" id="right">
+                  </div>
+                  <div class="circle" id="bottom">
+                  </div>
                 </div>
+          
+                <div class="front-content">
+                  <div class="description">
+                    <div class="title mgtop">
+                      <p class="title">
+                        <a href="" class="none text-light">INFRACTIONS</a>
+                      </p>
+                    </div>                   
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                  <h1 class="d-flex justify-content-center align-items-center">?</h1>                  
                 </div>
-
-        </th>
-
-      </tr>
+              </div>
+              <div class="front">
       
+                <div class="img">
+                  <div class="circle">
+                  </div>
+                  <div class="circle" id="right">
+                  </div>
+                  <div class="circle" id="bottom">
+                  </div>
+                </div>
+          
+                <div class="front-content">
+                  <div class="description">
+                    <div class="title mgtop">
+                      <p class="title">
+                        <a href="" class="none text-light">STATISTIQUES</a>
+                      </p>
+                    </div>                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                  <h1 class="d-flex justify-content-center align-items-center">?</h1>                  
+                </div>
+              </div>
+              <div class="front">
+      
+                <div class="img">
+                  <div class="circle">
+                  </div>
+                  <div class="circle" id="right">
+                  </div>
+                  <div class="circle" id="bottom">
+                  </div>
+                </div>
+          
+                <div class="front-content">
+                  <div class="description">
+                    <div class="title mgtop">
+                      <p class="title">
+                        <a href="" class="none text-light">HISTORIQUE</a>
+                      </p>
+                    </div>                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                   
+                      
+                    
+                  
+            </div>
+            
 
 
-</table>
 
 
 
-<table class = "infraUser">
 
-        <?php for ($i=0; $i < count($_SESSION['utilisateur']); $i++) { 
 
-           echo 'tr class ="">';
-           echo 'td class ="">'.$_SESSION['utilisateur'][$i]['nom'];
-           echo 'td class ="">'.$_SESSION['utilisateur'][$i]['prenom'];
-           echo 'td class ="">'.$_SESSION['utilisateur'][$i]['solde'];
 
-        }?>
-   
-    </table>
 
-   <!-- ///////////////////////// Nav bar Bottom //////////////////////////////////////////////-->
 
-    <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+
+
+
+
+
+
+
+
+
+          <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -144,5 +175,6 @@
               </div>
             </div>
           </nav>
+    
 </body>
 </html>

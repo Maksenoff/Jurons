@@ -1,5 +1,6 @@
 <?php
 include_once "Personne.class.php";
+include_once "Profil.class.php";
 
 class Utilisateur extends Personne
 {
@@ -19,15 +20,15 @@ class Utilisateur extends Personne
         $this->prenom = $prenom;
         $this->mail = $mail;
         $this->login = $login;
-        $this->$password = $password;
+        $this->password = $password;
         $this->solde = $solde;
-        $this->$_profil = $_profil;
+        $this->_profil = $_profil;
     }
 
     //===================== Méthodes =====================
 
     public function affiche(){
-        echo "Je suis là pour que la fonction abstraite fonctionne \n". ucfirst($this->prenom). " ". strtoupper($this->nom);
+        echo "Je suis là pour que la fonction abstraite fonctionne \n". ucfirst($this->prenom). " ". strtoupper($this->nom). PHP_EOL. "grade: ". $this->_profil->getGrade();
     }
 
     //===================== Méthodes d'accès =====================

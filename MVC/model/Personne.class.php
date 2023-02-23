@@ -1,5 +1,6 @@
 <?php
 
+
 abstract class Personne
 {
     //on définit les attributs de la classe
