@@ -1,44 +1,113 @@
+
+/**** Placement dans la page ****/
+
 .radioGaga {
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 10%;
+    margin-top: 0.5%;
 }
 
-#pj {
+.infraUser {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 15px;
+height: 40em;
+  
+}
+section {
+  height:40em;
+}
+
+.scroller {
+  /*** Scrollbar ***/
+  width: 227.5px;
+  height: 40em;
+  overflow-y: scroll;
+  scrollbar-color: black grey;
+  scrollbar-width: thin;
+}
+/**** Coin arrondi ****/
+
+#tlCorner {
     border-radius: 15px 0px 0px 0px;
 }
 
+#bottomCorner {
+  border-radius: 0px 0px 15px 15px;
+}
+#blCorner {border-radius: 0px 0px 0px 15px;}
+#brCorner {border-radius: 0px 0px 15px 0px;}
+#trCorner {border-radius: 0px 15px 0px 0px;}
+
+/**** Tableaux ****/
+
+
+
+#nom { border-left:1px solid #3D4C53;}
 
 .radioGaga th{
 
-    border: 1px solid black;
+    border-bottom: 1px solid white;
     border-collapse: collapse;
     text-align: center;
+    padding-top: 12px;
     height: 50px;
     width: 150px;
-    
-   
+    background-color: rgba(0, 0, 0, 0.726);
+    color: white;
+}
+tr:nth-child(even) {
+  background-color:rgba(0, 0, 0, 0.555);
 }
 
-#blnc {
-  border-radius: 0px 15px 0px 0px;
+input {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
 }
 
-#balance {
-
-    opacity: 0%
- 
+.infraUser td{
+  border-collapse: collapse;
+  height: 41px;
+  width: 227.5px;
+  background-color: rgba(0, 0, 0, 0.726);
+  padding-top: 5px;
+  color: white;
+  text-align: center;
+  
 }
 
+.infraUser th{
+  border-collapse: collapse;
+  height: 41px;
+  width: 227.5px;
+  background-color: rgba(0, 0, 0, 0.726);
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+}
+/**** Fond d'écran ****/
 
-    #holder{
-        -moz-user-select: -moz-none;
-        -khtml-user-select: none;
-        -webkit-user-select: none; 
-      }
+body{
+    background-image: url(../img/fond.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+tr {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/**** Bouton validation ****/
+#holder {margin-top: -12px;}
+
       .button {
         background: #3D4C53;
-        width : 180px;
+        width : 160px;
         height : 50px;
         overflow: hidden;
         padding-top: 7%;
@@ -47,16 +116,19 @@
         cursor : pointer;
         border-radius: 0px 15px 0px 0px;
         box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
       }
       .btnTwo {
         position : relative;
         width : 200px;
         height : 150px;
         margin-top: -100px;
-        padding-top: 2px;
+        padding-top: 0.5px;
         background : #25bd7e;
         left : -200px;
         transition : .3s;
+        border-bottom: 1px solid white;
       }
       .btnText {
         color : white;
@@ -76,17 +148,3 @@
       .button:active { /*Clicked and held*/
         box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
       }
-      
-
-
-body{
-    background-image: url(../img/fond.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-tr {
-    display: flex;
-    justify-content: space-around;
-
-}
