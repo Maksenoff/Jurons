@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/loginInscription.css">
+    <link rel="stylesheet" href="../view/css/LoginInscriptionStyle.css">
+
 
 
   <title>MDP oublié</title>
@@ -29,9 +30,9 @@
           </button>
           <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
          
-            <a href="./login.php"><button class="btnnav"> Connexion
+            <a href="./Login.php"><button class="btnnav"> Connexion
               </button></a>
-            <a href="./inscription.php"><button class="btnnav"> Inscription
+            <a href="./SignUp.php"><button class="btnnav"> Inscription
               </button></a>
           </div>
         </div>
@@ -48,7 +49,7 @@
               <label>Email</label>
             </div>
 
-            <a href="./login.php">
+            <a href="./Login.php">
               <span></span>
               <span></span>
               <span></span>

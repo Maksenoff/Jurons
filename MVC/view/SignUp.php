@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/loginInscription.css">
+    <link rel="stylesheet" href="../view/css/LoginInscriptionStyle.css">
+
 
     <title>Inscription</title>
 </head>
@@ -34,9 +35,9 @@
                 </button>
                 <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup" >
                
-                    <a href="./login.php"><button class="btnnav"> Connexion
+                    <a href="./Login.php"><button class="btnnav"> Connexion
                         </button></a>
-                    <a href="./inscription.php"><button class="btnnav"> Inscription
+                    <a href="./SignUp.php"><button class="btnnav"> Inscription
                         </button></a>
                 </div>
             </div>
@@ -70,7 +71,7 @@
                         <input required="password" name="password" type="password">
                         <label>Mot de passe </label>
                     </div>
-                    <a href="./login.php">
+                    <a href="./Login.php">
                         <span></span>
                         <span></span>
                         <span></span>
