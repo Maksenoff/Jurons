@@ -81,7 +81,7 @@
 
         <th id = trCorner> 
 
-     <!-- ////////////// Button //////////////-->
+     <!-- ////////////// Bouton "Valider" //////////////-->
 
         <div id="holder">
 
@@ -229,16 +229,29 @@
   </table>
 </section>
 
+<!-- ////////////////// Bouton CRUD /////////////////////////-->
+
+<div class = "butCrud">
+
+<button type= "submit" name = "create" id = "cr">Create</input>
+
+<input type= "button" name = "update" id = "up">Update</input>
+
+<input type= "button" name = "delete" id = "de">Delete</input>
+
+</div>
 
 
-        <!-- <?php for ($i=0; $i < sizeof($_SESSION['utilisateur']); $i++) { 
+        <!-- <?/*php for ($i=0; $i < sizeof($_SESSION['utilisateur']); $i++) { 
 
            echo 'tr class ="">';
            echo 'td class ="">'.$_SESSION['utilisateur'][$i]['nom'];
            echo 'td class ="">'.$_SESSION['utilisateur'][$i]['prenom'];
            echo 'td class ="">'.$_SESSION['utilisateur'][$i]['solde'];
 
-        }?>
+        }
+        */
+        ?>
     -->
   
 

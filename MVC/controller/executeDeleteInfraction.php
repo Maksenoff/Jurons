@@ -1,12 +1,12 @@
 <?php
 
-include "../modele/fonctionsInfraction.php";
+include "../model/fonctionsInfraction.class.php";
 
 session_start();
 
-$id = $_POST['id'];
+$id_infraction = $_POST['ID'];
  
-deleteInfraction($id_infraction);
+Infraction::deleteInfraction($id_infraction);
 
 
 header("Location: ../view/infractionView.php");

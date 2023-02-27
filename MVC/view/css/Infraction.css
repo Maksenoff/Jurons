@@ -12,19 +12,42 @@
   margin-right: 25%;
   margin-top: 15px;
 height: 40em;
+
+
+            color: white;
+            text-align: center;
   
 }
 section {
   height:40em;
+ 
+  width: 65em;
+            overflow-y: auto;
+
+            border-radius: 5px;
+            margin: 0 auto;
 }
 
-.scroller {
-  /*** Scrollbar ***/
-  width: 227.5px;
-  height: 40em;
-  overflow-y: scroll;
-  scrollbar-color: black grey;
-  scrollbar-width: thin;
+ /* Designing for scroll-bar */
+ ::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gainsboro;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 /**** Coin arrondi ****/
 
@@ -66,17 +89,6 @@ input {
   margin-top: 3px;
 }
 
-.infraUser td{
-  border-collapse: collapse;
-  height: 41px;
-  width: 227.5px;
-  background-color: rgba(0, 0, 0, 0.726);
-  padding-top: 5px;
-  color: white;
-  text-align: center;
-  
-}
-
 .infraUser th{
   border-collapse: collapse;
   height: 41px;
@@ -88,6 +100,18 @@ input {
   border-left: 1px solid white;
   border-top: 1px solid white;
 }
+
+.infraUser td{
+  border-collapse: collapse;
+  height: 41px;
+  width: 227.5px;
+  background-color: rgba(0, 0, 0, 0.726);
+  padding-top: 5px;
+  color: white;
+  text-align: center;
+}
+
+
 /**** Fond d'écran ****/
 
 body{
@@ -148,3 +172,28 @@ tr {
       .button:active { /*Clicked and held*/
         box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
       }
+
+
+
+/************ Bouton Crud **************/
+
+
+.butCrud {
+ 
+ 
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+} 
+
+
+#cr, #up, #de {
+  background-color:#3D4C53;
+  color: #FFF;
+  overflow: hidden;
+  margin: 40px;
+  width: 120px;
+  height: 50px;
+
+}

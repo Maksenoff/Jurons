@@ -2,41 +2,45 @@
 
 class Infraction {
 
-public function createInfraction() {
+public static function createInfraction(Infraction $infraction) : bool {
     //Chaine de connexion à la base de donnée
-    $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $status = false ;
 
     $sql = "INSERT INTO infraction (libelle, tarif) VALUES (?,?)";
 
     $stmt= $bdd->prepare($sql);
-    $status = $stmt->execute(); 
+    $status = $stmt->execute([$infraction->getLibelle(),$infraction->getTarif()]); 
 
     return $status;
 
 }
 
 
-public function updateInfraction( $id_infraction, $choixL, $oldLibelle, $newLibelle, $choixF, $oldTarif, $newTarif) {
-    $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+public static function updateInfraction() : bool {
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
     
+    $libelle = $_POST['Libelle'];
+    $tarif = $_POST['Tarif'];
+    $id_infraction = $_POST['ID'];
 
-    $sql=("UPDATE infraction SET $choixL = '$newLibelle' WHERE $choixL = '$oldLibelle' AND SET $choixF = '$newTarif' WHERE $choixF = '$oldTarif' AND ID = '$id_infraction'");
+    $sql=("UPDATE infraction SET $libelle = 'Libelle' WHERE $tarif = 'Tarif' WHERE id_infraction = '$id_infraction'");
 
 
     $stmt= $bdd->prepare($sql);
-    $status = $stmt->execute(); 
+    $update = $stmt->execute(); 
 
-    return $status;
+    return $update;
     
 }
 
 
-public function deleteInfraction($id_infraction) {
-    $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+public static function deleteInfraction($id_infraction) : bool {
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-    
+    $status = false;
+    $id_infraction = $_POST['ID'];
 
     $sql = "DELETE FROM infraction WHERE id = '$id_infraction'";
     $stmt= $bdd->prepare($sql);
@@ -47,9 +51,9 @@ public function deleteInfraction($id_infraction) {
 }
 
 
-public function historique() {
+public static function historique() {
 
-        $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         
         $sql = "SELECT * FROM balance";
         
@@ -60,16 +64,16 @@ public function historique() {
     
 }
 
-public function statCamenbert() {
+public static function statCamenbert() {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=Jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         
     $sql = "SELECT prenom, solde FROM Utilisateur GROUP BY prenom" ;
 
     $stmt= $bdd->prepare($sql);
     $stmt ->execute();
-    $user= $stmt->fetchAll();
-    return $user;
+    $camembert= $stmt->fetchAll();
+    return $camembert;
 }
 
 }
