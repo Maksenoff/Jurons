@@ -1,7 +1,6 @@
 <?php
 include_once "../model/Personne.class.php";
 include_once "../model/Utilisateur.class.php";
-include_once "../model/Profil.class.php";
 include_once("../model/fonctionStatistique.php");
 
 $user[1] = new Utilisateur("Abidbol1", "Georges", "izzhbhbzz@izbv.fr", "cowboy", "*****", 1001, 1);
@@ -23,6 +22,12 @@ $user[16] = new Utilisateur("Abidbol9", "Georges", "izzhbhbzz@izbv.fr", "cowboy"
 
 $tableAscend = createAscendingTable($user);
 print_r($tableAscend);
+echo PHP_EOL;
 
 $reste = calculRemainder($tableAscend);
 echo $reste;
+echo PHP_EOL;
+
+$somme = calculSum($tableAscend);
+echo $somme;
+echo PHP_EOL;
