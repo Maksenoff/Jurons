@@ -1,5 +1,6 @@
 <?php
 include_once "../model/Utilisateur.class.php";
+include_once "../model/Profil.class.php";
 
 
 class DBUserManager{
@@ -61,6 +62,20 @@ public static function readProfil($grade):array{
     
     return $array;
 }
+public static function createProfil(Profil $profil):bool{
+    //Chaine de connexion à la base de donnée
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $status = false ;
+     
+            $sql = "INSERT INTO `profil`(`grade`) VALUES (?)";
+            $stmt= $bdd->prepare($sql);
+            $status = $stmt->execute([$profil->getGrade()]);
+    
+    
+    return $status;
+
+}
+
 }
 
 // print_r(DBUserManager::readProfil('Admin'));
