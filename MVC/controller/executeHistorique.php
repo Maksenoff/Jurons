@@ -1,18 +1,9 @@
 <?php
-
-include "../modele/fonctionsInfraction.php";
-
+include_once "../model/DBUserManager.php";
 session_start();
+$_SESSION['listUser'] = DBUserManager::readUser();
 
-$statut = historique();
+print_r($_SESSION['listUser']);
 
-if ($statut) {
-    echo "ok!!!";
-} else {
-    echo "KO!!!";
-}
-// $filePath = $maListe;
-// $data = rewriteData($filePath);
-// generateTable($data);
-
-header("Location: ../view/infractionView.php");
+header('Location: ../view/historique.php');
+?>

@@ -21,7 +21,7 @@ public static function readUser():array{
     //Chaine de connexion à la base de donnée
     $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
      
-            $sql = "SELECT `id_utilisateur` `Nom`, `Prenom`, `loginUser`, `solde`, `grade` FROM utilisateur, profil WHERE utilisateur.id_profil= profil.id_profil;";
+            $sql = "SELECT `id_utilisateur`, `Nom`, `Prenom`, `loginUser`, `solde`, `grade` FROM utilisateur, profil WHERE utilisateur.id_profil= profil.id_profil;";
             $stmt= $bdd->query($sql);
             $array = $stmt->fetchAll(PDO::FETCH_ASSOC);    
     

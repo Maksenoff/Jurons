@@ -62,128 +62,27 @@
       </thead>
       <tbody>
 
-        <tr>
+      
+        <!-- <tr>
           <th class="th th-id">01</th>
           <th class="th th-nom">Baptiste</th>
           <th class="th th-balance">Thibaut         
           </th>
           <th class="th th-date">Date          
           </th>
-        </tr>        
-        
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
+        </tr>         -->       
+        <?php
+          session_start();
+          for ($i=0; $i < count($_SESSION['listUser']); $i++) { 
+            echo '<tr>';
+            echo '<th class="th th-id">'. $_SESSION['listUser'] [$i]['id_utilisateur'].'</th>';
+            echo '<th class="th th-nom">'. $_SESSION['listUser'] [$i]['Nom']. ' '. $_SESSION['listUser'] [$i]['Prenom'].'</th>';
+            echo '<th class="th th-balance">'. $_SESSION['listUser'] [$i]['loginUser'].'</th>';
+            echo '<th class="th th-date">'. $_SESSION['listUser'] [$i]['solde'].'</th>';
+          }
 
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
-        <tr>
-          <th class="th th-id">01</th>
-          <th class="th th-nom">Baptiste</th>
-          <th class="th th-balance">Thibaut         
-          </th>
-          <th class="th th-date">Date          
-          </th>
-        </tr>  
+        ?>
+        
 
 
 
