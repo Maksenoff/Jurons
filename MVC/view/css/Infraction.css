@@ -2,16 +2,17 @@
 /**** Placement dans la page ****/
 
 .radioGaga {
-    margin-left: 25%;
+    margin-left: 5%;
     margin-right: 25%;
     margin-top: 0.5%;
 }
 
 .infraUser {
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 5%;
+  margin-right: 10%;
   margin-top: 15px;
 height: 40em;
+
 
 
             color: white;
@@ -20,12 +21,16 @@ height: 40em;
 }
 section {
   height:40em;
- 
-  width: 65em;
-            overflow-y: auto;
+  width: 950px;
+margin-left: 1.45%;
+padding-right: 2.5%;
 
+            overflow-y:scroll;
+            overflow-x: hidden;
             border-radius: 5px;
-            margin: 0 auto;
+
+            
+          
 }
 
  /* Designing for scroll-bar */
@@ -36,7 +41,7 @@ section {
 /* Track */
 ::-webkit-scrollbar-track {
   background: gainsboro;
-  border-radius: 5px;
+  border-radius: 5px;margin-top: 15px;
 }
 
 /* Handle */
@@ -112,6 +117,7 @@ input {
 }
 
 
+
 /**** Fond d'écran ****/
 
 body{
@@ -178,22 +184,55 @@ tr {
 /************ Bouton Crud **************/
 
 
-.butCrud {
+.tabplusBout {
  
- 
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  flex-wrap: wrap;
+position: relative;
 } 
 
-
-#cr, #up, #de {
-  background-color:#3D4C53;
+ #cr,#up, #de
+{
+  padding: 10px 24px;
+  margin: 15px;
+  display: block; 
+  
   color: #FFF;
-  overflow: hidden;
-  margin: 40px;
   width: 120px;
   height: 50px;
+  position: absolute;
 
+}
+
+#cr{
+  background-color:#3D4C53;right: 10%;
+  top: 15px;
+border:solid 3px #2068c1;
+border-radius: 8px;
+}
+
+  #cr:hover {
+    background-color: #2068c1;
+  }
+
+#up {
+  background-color:#3D4C53;right: 10%;
+top: 70px;
+border:solid 3px #f6a823;
+border-radius: 8px;
+}
+
+#up:hover {
+  background-color: #f6a823;
+}
+
+#de {
+
+background-color: #3D4C53;right: 10%;
+top: 125px;
+border:solid 3px #c31010;
+border-radius: 8px;
+
+}
+
+#de:hover {
+  background-color: #c31010;
 }

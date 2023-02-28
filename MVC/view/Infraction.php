@@ -105,6 +105,7 @@
 </table>
 
  <!-- ////////////////////// Tableau 2 /////////////////-->
+<div class = "tabplusBout">
 <section>
 <table class = "infraUser scroller">
 
@@ -235,12 +236,12 @@
 
 <button type= "submit" name = "create" id = "cr">Create</input>
 
-<input type= "button" name = "update" id = "up">Update</input>
+<button type= "submit" name = "update" id = "up">Update</input>
 
-<input type= "button" name = "delete" id = "de">Delete</input>
+<button type= "submit" name = "delete" id = "de">Delete</input>
 
 </div>
-
+</div>
 
         <!-- <?/*php for ($i=0; $i < sizeof($_SESSION['utilisateur']); $i++) { 
 
