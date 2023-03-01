@@ -7,31 +7,32 @@
     margin-top: 0.5%;
 }
 
-.infraUser {
+.titreTab,.infraUser {
   margin-left: 5%;
   margin-right: 10%;
-  margin-top: 15px;
+
 height: 40em;
-
-
 
             color: white;
             text-align: center;
   
 }
+
+
+
 section {
   height:40em;
   width: 950px;
-margin-left: 1.45%;
+margin-left: 2.35%;
 padding-right: 2.5%;
 
-            overflow-y:scroll;
-            overflow-x: hidden;
-            border-radius: 5px;
-
-            
-          
+      overflow-y:auto;
+      overflow-x: hidden;
+      border-radius: 5px;
+ 
 }
+
+
 
  /* Designing for scroll-bar */
  ::-webkit-scrollbar {
@@ -54,15 +55,14 @@ padding-right: 2.5%;
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 /**** Coin arrondi ****/
+#infr {margin-left: 5px;}
 
-#tlCorner {
-    border-radius: 15px 0px 0px 0px;
-}
+#tlCorner{border-radius: 15px 0px 0px 0px;}
 
-#bottomCorner {
-  border-radius: 0px 0px 15px 15px;
-}
+#bottomCorner {border-radius: 0px 0px 15px 15px;}
+
 #blCorner {border-radius: 0px 0px 0px 15px;}
 #brCorner {border-radius: 0px 0px 15px 0px;}
 #trCorner {border-radius: 0px 15px 0px 0px;}
@@ -70,20 +70,41 @@ padding-right: 2.5%;
 /**** Tableaux ****/
 
 
+/***** Legende du tableau *****/
 
-#nom { border-left:1px solid #3D4C53;}
+#trTab2 { 
+  background-color: black;
+  position:fixed;
+  width: 890px;
+  height: 50px;
+  padding-top: 10px;
+}
 
-.radioGaga th{
+
+
+#trTab2 th {
+  padding-right: 15px;
+  height: 50px;
+
+}
+
+ .radioGaga th{
 
     border-bottom: 1px solid white;
     border-collapse: collapse;
     text-align: center;
-    padding-top: 12px;
-    height: 50px;
-    width: 150px;
+    padding-top: 6px;
+   
+    width: 226px;
     background-color: rgba(0, 0, 0, 0.726);
     color: white;
 }
+
+.ligne1 {height: 50px;}
+
+.ligne2 {opacity: 0; height: 15px;}
+
+
 tr:nth-child(even) {
   background-color:rgba(0, 0, 0, 0.555);
 }
@@ -101,21 +122,22 @@ input {
   background-color: rgba(0, 0, 0, 0.726);
   color: white;
   text-align: center;
-  padding-top: 5px;
   border-left: 1px solid white;
   border-top: 1px solid white;
+  
+  
 }
 
-.infraUser td{
+.titreTab,.infraUser td{
   border-collapse: collapse;
   height: 41px;
   width: 227.5px;
   background-color: rgba(0, 0, 0, 0.726);
-  padding-top: 5px;
+  padding-top: 12px;
   color: white;
   text-align: center;
+  
 }
-
 
 
 /**** Fond d'écran ****/
@@ -133,11 +155,11 @@ tr {
 }
 
 /**** Bouton validation ****/
-#holder {margin-top: -12px;}
+#holder {margin-top: -6px;}
 
       .button {
         background: #3D4C53;
-        width : 160px;
+        width : 225.5px;
         height : 50px;
         overflow: hidden;
         padding-top: 7%;
@@ -147,14 +169,14 @@ tr {
         border-radius: 0px 15px 0px 0px;
         box-shadow: 0px 1px 2px rgba(0,0,0,.2);
         border-bottom: 1px solid white;
-        padding-bottom: 10px;
+       
       }
       .btnTwo {
         position : relative;
         width : 200px;
         height : 150px;
         margin-top: -100px;
-        padding-top: 0.5px;
+        padding-top: 1px;
         background : #25bd7e;
         left : -200px;
         transition : .3s;
@@ -165,7 +187,7 @@ tr {
         transition : .3s;
       }
       .btnText2 {
-        margin-top : 63px;
+        margin-top : 58px;
         margin-right : -130px;
         color : #FFF;
       }
@@ -180,59 +202,18 @@ tr {
       }
 
 
+.Infraction{
+  width: 110px;
 
-/************ Bouton Crud **************/
+  margin-left: 15px;
 
 
-.tabplusBout {
+}
+
+.retard{
+  width: 90px;
  
-position: relative;
-} 
-
- #cr,#up, #de
-{
-  padding: 10px 24px;
-  margin: 15px;
-  display: block; 
-  
-  color: #FFF;
-  width: 120px;
-  height: 50px;
-  position: absolute;
+  margin-left: 15px;
 
 }
 
-#cr{
-  background-color:#3D4C53;right: 10%;
-  top: 15px;
-border:solid 3px #2068c1;
-border-radius: 8px;
-}
-
-  #cr:hover {
-    background-color: #2068c1;
-  }
-
-#up {
-  background-color:#3D4C53;right: 10%;
-top: 70px;
-border:solid 3px #f6a823;
-border-radius: 8px;
-}
-
-#up:hover {
-  background-color: #f6a823;
-}
-
-#de {
-
-background-color: #3D4C53;right: 10%;
-top: 125px;
-border:solid 3px #c31010;
-border-radius: 8px;
-
-}
-
-#de:hover {
-  background-color: #c31010;
-}
