@@ -1,3 +1,5 @@
+<?php include_once "../controller/executeStatistique.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,21 +23,7 @@
 </head>
 
 <body>
-    <?php
 
-    $con = mysqli_connect("localhost", "root", "", "bdd_jurons");
-    if (!$con) {
-        echo "connexion échouée";
-    }
-    $req = mysqli_query($con, "SELECT solde, Prenom FROM utilisateur");
-
-    foreach ($req as $data) {
-        $solde[] = $data['solde'];
-        $prenom[] = $data['Prenom'];
-    }
-
-
-    ?>
 
 
 
@@ -67,33 +55,13 @@
             </div>
         </nav>
 
-
-
-        <?php $solde = json_encode($solde);
-        $solde2 = str_replace(array('"', "[", "]"), '', $solde);
-        $solde3 = str_replace(array(','), ';', $solde2);
-     
-
-        $prenom = json_encode($prenom);
-        $prenom2 = str_replace(array('"', "[", "]"), '', $prenom);
-        $prenom3 = str_replace(array(','), ';', $prenom2);
-   
-        ?>;
-
-
-
-
         <H1>Parlons statistique</H1>
-
-
         <div class="cercle">
             <pie-chart data="
- <?php echo $solde3 ?>
+            <?php echo $listeSolde ?>
 
-            " gap="0.01" labels=" <?php echo $prenom3 ?>"></pie-chart>
+            " gap="0.01" labels=" <?php echo $listePrenom ?>"></pie-chart>
         </div>
-
-
 
         <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
