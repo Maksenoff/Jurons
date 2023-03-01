@@ -7,12 +7,10 @@ class Infraction {
     private String $libelle;
     private float $tarif;
 
-    public function __construct(int $id_infraction, String $libelle, float $tarif)
+    public function __construct(String $libelle, float $tarif)
     {
-        $this->id_infraction = $id_infraction;
         $this->libelle = $libelle;
         $this->tarif = $tarif;
-
     }
 
 
