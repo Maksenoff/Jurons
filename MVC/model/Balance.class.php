@@ -6,11 +6,15 @@ class Balance
     private int $id_utilisateur;
     private int $id_infraction;
     private string $dateBalance;
+    private int $id_balance;
 
     //Constructeur d'initialisation
-    public function __construct(string $dateBalance)
+    public function __construct(int $id_utilisateur, int $id_infraction,  string $dateBalance, int $id_balance)
     {
+        $this->id_utilisateur = $id_utilisateur;
+        $this->id_infraction = $id_infraction;
         $this->dateBalance = $dateBalance;
+        $this->id_balance = $id_balance; 
     }
 
     //===================== Méthodes =====================
@@ -73,6 +77,26 @@ class Balance
     public function setDateBalance($dateBalance)
     {
         $this->dateBalance = $dateBalance;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id_balance
+     */ 
+    public function getId_balance()
+    {
+        return $this->id_balance;
+    }
+
+    /**
+     * Set the value of id_balance
+     *
+     * @return  self
+     */ 
+    public function setId_balance($id_balance)
+    {
+        $this->id_balance = $id_balance;
 
         return $this;
     }
