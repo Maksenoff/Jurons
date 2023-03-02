@@ -46,22 +46,16 @@
             <img src="./img/alice.png" alt="" class="portraitAlice">
             <div class="login-box">
                 <p>Connexion</p>
-                <form>
+                <form action="../controller/Execute_Login.php" method="post">
                     <div class="user-box">
-                        <input required="Email" name="Email" type="Email">
-                        <label>Email</label>
+                        <input required="text" name="loginUser" type="text">
+                        <label>Login</label>
                     </div>
                     <div class="user-box">
-                        <input required="password" name="password" type="password">
+                        <input required="password" name="mdp" type="password">
                         <label>Mot de passe</label>
                     </div>
-                    <a href="#">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Ok
-                    </a>
+                    <input type="submit" style="width : 10em" name="submit" class="btn btn-outline-success" value="Connexion">
                 </form><br>
                 <p>Mot de passe oublié ? <a href="./MDP.php" class="a2">Oh billot !</a><br>
                     Pas encore de compte ? <a href="./SignUp.php" class="a2">Prends un biscuit !</a>

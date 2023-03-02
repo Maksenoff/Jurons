@@ -50,36 +50,30 @@
             <img src="./img/fou.png" alt="" class="portraitFou">
             <div class="login-box w-25">
                 <p>Inscription</p>
-                <form>
+                <form action="../controller/Execute_Inscription.php" method="post">
                     <div class="user-box">
-                        <input required="nom" name="nom" type="nom">
+                        <input required="nom" name="Nom" type="nom">
                         <label>Nom</label>
                     </div>
                     <div class="user-box">
-                        <input required="prenom" name="prenom" type="prenom">
+                        <input required="prenom" name="Prenom" type="prenom">
                         <label>Prénom </label>
                     </div>
 
                     <div class="user-box">
-                        <input required="pseudo" name="pseudo" type="pseudo">
+                        <input required="pseudo" name="loginUser" type="pseudo">
                         <label>Pseudo</label>
                     </div>
 
                     <div class="user-box">
-                        <input required="Email" name="Email" type="text">
+                        <input required="Email" name="Mail" type="text">
                         <label>Email</label>
                     </div>
                     <div class="user-box">
-                        <input required="password" name="password" type="password">
+                        <input required="password" name="mdp" type="password">
                         <label>Mot de passe </label>
                     </div>
-                    <a href="./Login.php">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Ok
-                    </a>
+                    <input type="submit" style="width : 10em" name="submit" class="btn btn-outline-success" value="Inscritption">
                 </form>
             </div>
         </div>
