@@ -25,9 +25,9 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav menu">
-                  <a class="nav-link active text-light" aria-current="page" href="#">Infractions</a>
-                  <a class="nav-link active text-light" aria-current="page" href="#">Statistiques</a>
-                  <a class="nav-link active text-light" aria-current="page" href="#">Historique</a>
+                  <a class="nav-link active text-light" aria-current="page" href="../controller/executeInfraction.php">Infractions</a>
+                  <a class="nav-link active text-light" aria-current="page" href="../view/Statistique.php">Statistiques</a>
+                  <a class="nav-link active text-light" aria-current="page" href="../controller/executeHistorique.php">Historique</a>
                 </div>
                 <button class="btnav"> Login
                 </button>
