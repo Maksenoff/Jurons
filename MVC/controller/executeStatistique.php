@@ -36,10 +36,10 @@ include_once("../model/fonctionStatistique.php");
 
 
 
-$listePrenom = getPrenoms();
-echo $getPrenom;
 $listeSolde = getSoldes();
 
 
+
+$listePrenom = getPrenoms();
 
 

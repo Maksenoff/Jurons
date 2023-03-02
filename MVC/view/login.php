@@ -25,17 +25,14 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav menu">
-                  <a class="nav-link active text-light" aria-current="page" href="../view/Infraction.php">Infractions</a>
-                  <a class="nav-link active text-light" aria-current="page" href="../view/Statistique.php">Statistiques</a>
-                  <a class="nav-link active text-light" aria-current="page" href="../view/historique.php">Historique</a>
-                </div>
+
+              
+          
                 <a href="../view/login.php"><button class="btnav"> Connexion
                 </button></a>
                 <a href="../view/SignUp.php"><button class="btnav"> Inscription
                 </button></a>
-                <a href="../view/Admin.html"><button class="btnav"> Admin
-                </button></a>
+
               </div>
             </div>
           </nav>
