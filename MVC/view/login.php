@@ -19,23 +19,26 @@
 <body>
 <!-- HEADER -->
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-              <a class="navbar-brand playfaire text-light" href="../View/Home.html"><h2>La Boîte à Jurons</h2></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="container-fluid">
+      <a class="navbar-brand playfaire text-light" >
+        <h2>La Boîte à Jurons</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="Nav3">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <a href="../view/login.php"><button class="btnav"> Connexion
+            </button></a>
+          <a href="../view/SignUp.php"><button class="btnav"> Inscription
+            </button></a>
 
-              
-          
-                <a href="../view/login.php"><button class="btnav"> Connexion
-                </button></a>
-                <a href="../view/SignUp.php"><button class="btnav"> Inscription
-                </button></a>
-
-              </div>
-            </div>
-          </nav>
+            
+        </div>
+      </div>
+    </div>
+  </nav>
           <!--   -->
 
 

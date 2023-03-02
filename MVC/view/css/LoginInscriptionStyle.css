@@ -13,13 +13,6 @@
     background-position: center;
 }
 
-.murFou {
-    background-image: url("../img/fond.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
 
 
 .login-box {
@@ -215,8 +208,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: -5%;
-    margin-bottom: -5%;
+
 
 }
 
@@ -224,6 +216,7 @@
 
     border-radius: 1000px;
     margin-right: 15%;
+    margin-top: 3%;
 
 }
 
@@ -255,9 +248,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-margin-top: -2%;
-
-margin-left: 7%;
+    margin-top: 3%;
+    margin-left: 7%;
 }
 
 
@@ -425,4 +417,3 @@ button:hover:after {
 .playfaire {
     font-family: 'Playfair Display', serif;
 }
-

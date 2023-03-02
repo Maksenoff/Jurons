@@ -24,7 +24,7 @@
 <!-- HEADER -->
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand playfaire text-light" href="../View/Home.html">
+      <a class="navbar-brand playfaire text-light" >
         <h2>La Boîte à Jurons</h2>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
