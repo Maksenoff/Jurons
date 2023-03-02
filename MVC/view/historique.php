@@ -53,8 +53,8 @@
       <thead>
 
         <tr class="tr-legend">
-          <th class="th th-id">ID</th>
-          <th class="th th-nom">Nom et Prénom</th>
+          <th class="th th-id">Nom et Prénom</th>
+          <th class="th th-nom">Infraction</th>
           <th class="th th-balance">La balance</th>
           <th class="th th-date">date de la délation</th>
         </tr>
@@ -73,12 +73,12 @@
         </tr>         -->       
         <?php
           session_start();
-          for ($i=0; $i < count($_SESSION['listUser']); $i++) { 
+          for ($i=0; $i < count($_SESSION['listBalance']); $i++) { 
             echo '<tr>';
-            echo '<th class="th th-id">'. $_SESSION['listUser'] [$i]['id_utilisateur'].'</th>';
-            echo '<th class="th th-nom">'. $_SESSION['listUser'] [$i]['Nom']. ' '. $_SESSION['listUser'] [$i]['Prenom'].'</th>';
-            echo '<th class="th th-balance">'. $_SESSION['listUser'] [$i]['loginUser'].'</th>';
-            echo '<th class="th th-date">'. $_SESSION['listUser'] [$i]['solde'].'</th>';
+            echo '<th class="th th-id">'. $_SESSION['listBalance'] [$i]['Nom']. ' '. $_SESSION['listBalance'] [$i]['Prenom']. '</th>';
+            echo '<th class="th th-nom">'. $_SESSION['listBalance'] [$i]['libelle'].'</th>';
+            echo '<th class="th th-balance">'. $_SESSION['laBalance'] [$i][0]['Nom']. ' ' . $_SESSION['laBalance'] [$i][0]['Prenom'] . '</th>';
+            echo '<th class="th th-date">'. $_SESSION['listBalance'] [$i]['dateBalance'].'</th>';
           }
 
         ?>
@@ -88,25 +88,6 @@
 
         </tbody>
   </section>
-
-
-
-        <!-- exemple de tableau -->
-        <?php
-  /* session_start();
-    for ($i=0; $i < count($_SESSION['listStag']); $i++) { 
-      echo'<tr class="th">'; 
-      echo '<td class="th">'.$_SESSION ['listStag'] [$i]['ID'].'</td>';
-      echo '<td class="th">'.$_SESSION ['listStag'] [$i]['NOM'].'</td>';
-      echo '<td class="th">'.$_SESSION ['listStag'] [$i]['PRENOM'].'</td>';
-      echo '<td class="th">'.$_SESSION ['listStag'] [$i]['PLACE'].'</td>';
-      echo '</tr>';
-    }*/
-    ?>
-
-
- 
-
 
 
   <!-- FOOTER -->

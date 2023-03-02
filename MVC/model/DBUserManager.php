@@ -76,7 +76,21 @@ public static function createProfil(Profil $profil):bool{
 
 }
 
+//méthode pour retrouver la balance à partir de l' id balance de la table balance.
+public static function selectCollabo($id_balance): array{
+    //Chaine de connexion à la base de donnée
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+     
+            $sql = "SELECT * FROM `utilisateur` WHERE `id_utilisateur` = $id_balance";
+            $stmt= $bdd->query($sql);
+            $array = $stmt->fetchAll(PDO::FETCH_ASSOC);    
+    
+    return $array;
 }
+
+}
+
+// print_r(DBUserManager::selectCollabo(1));
 
 // print_r(DBUserManager::readProfil('Admin'));
 
