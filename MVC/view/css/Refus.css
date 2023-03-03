@@ -1,0 +1,39 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-top: 1%;
+    font-family: 'Playfair Display', serif;
+    text-shadow: #fff 2px 1px 1px;
+margin-top: 8%;
+}
+
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-top: 1%;
+    font-family: 'Playfair Display', serif;
+    text-shadow: #fff 2px 1px 1px;
+
+}
+
+.fumee {
+    background-image: url(../img/fumée.png);
+    padding-bottom: 3%;
+    padding-top: 3%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.Absolem {
+width: 17%;
+height: 17%;
+border-radius: 100%;
+margin-left:40% ;
+margin-right:40% ;
+margin-top: 3%;
+}

@@ -33,7 +33,7 @@ class PieChart extends HTMLElement {
 
         const labels = this.getAttribute('labels')?.split(';') ?? []
         // COULEUR : variable qui détermine les différentes couleurs, des différents chemins
-        const colors = this.getAttribute('colors')?.split(';') ?? ['#000000', '#322B40', '#57525D', '#110E2C', '#7F728A', '#27262E', '#2A2B46', '#2C2F5D', '#52536A' ,'#2FA43E'];
+        const colors = this.getAttribute('colors')?.split(';') ?? ['#000000','#2a9d8f', '#57525D', '#110E2C', '#7F728A', '#27262E', '#2A2B46', '#2C2F5D', '#52536A' ,'#2FA43E'];
         //extirper les données et on spit les différentes valeurs par rapport au ";" et mapper les difféntes valeurs 
         this.data = this.getAttribute('data').split(';').map(v => parseFloat(v))
 
