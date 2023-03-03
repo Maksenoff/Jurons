@@ -53,147 +53,74 @@
 
   <section>
 
-  <!-- ////////////////////// Tableau 1 /////////////////-->
-  <form action="../controller/executeInfraction.php"  method="get" name="validerInf">
-    <table class="radioGaga">
+    <!-- ////////////////////// Tableau 1 /////////////////-->
+    <form action="../controller/executeInfraction.php" method="get" name="validerInf">
+      <table class="tableau ">
 
-      <!-- ////////// Infraction /////////////// -->
+        <!-- ////////// Infraction /////////////// -->
 
-      <tr class="ligne1">
+        <tr class="legend">
 
-        <th id="tlCorner">
+          <th class="infraction" >
 
-          <label for="">Infraction</label>
-          <select name="infra" id="infra">
+            <label for="">Infraction</label>
+            <select name="infra" id="infra">
 
-            <option value="1">Petit Juron</option>
-            <option value="2">Gros Juron</option>
-            <option value="3">Geste</option>
-            <option value="4">Rôt</option>            
-            <option value="5">retard de 10min</option>
-            <option value="6">retard de 20min</option>
-            <option value="7">retard de 30min</option>
-            <option value="8">retard de 40min</option>
-            <option value="9">retard de 50min</option>
-            <option value="10">retard de 60min</option>
+              <option value="1">Petit Juron</option>
+              <option value="2">Gros Juron</option>
+              <option value="3">Geste</option>
+              <option value="4">Rôt</option>
+              <option value="5">retard de 10min</option>
+              <option value="6">retard de 20min</option>
+              <option value="7">retard de 30min</option>
+              <option value="8">retard de 40min</option>
+              <option value="9">retard de 50min</option>
+              <option value="10">retard de 60min</option>
 
-          </select>
+            </select>
 
-        <th></th>
-
-        </th>
-
-        <!-- //////////  Retard /////////////// -->
-
-        <!-- <th>
-          <label for="">Retard</label>
-          <select name="infra" id="infra">
-
-            <option value="">0</option>
-            <option value="5">10</option>
-            <option value="6">20</option>
-            <option value="7">30</option>
-            <option value="8">40</option>
-            <option value="9">50</option>
-            <option value="10">60</option>
+          </th>
 
 
-          </select>
+          <th id=trCorner>
 
-        </th> -->
+            <!-- ////////////// Bouton "Valider" //////////////-->
 
+            <input class="button " type="submit" value="Valider">
 
+          </th>
 
-        <th id=trCorner>
+        </tr> 
 
-          <!-- ////////////// Bouton "Valider" //////////////-->
+          <!-- ////////// Légende du tableau //////////-->
 
-                <!-- <div id="holder" > -->
-
-      <input class="button " type="submit" value="Valider">
-
-              <!-- <p class="btnText" >Valider<p> -->
-
-              <!-- <div class="btnTwo"> -->
-
-                <!-- <p class="btnText2"></p> -->
-              <!-- </div> -->
-            
-                <!-- </div> -->
-
-        </th>
-
-      </tr>
-      <tr class="ligne2">
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-
-    </table>
-
-    <!-- ////////////////////// Tableau 2 /////////////////-->
-    <div class="tabplusBout">
-      
-
-        <!-- ////////// Légende du tableau //////////-->
-        <table class="titreTab">
-          <tr id="trTab2">
-            <th> Nom </th>
-            <th> Prénom </th>
-            <th> Solde </th>
-            <th> </th>
-          </tr>
-        </table>
+        <tr id="trTab2">
+          <td class="td1"> Nom </td>
+          <td class="td2"> Prénom </td>
+          <td class="td3"> Solde </td>
+          <td class="td4"> </td>
+        </tr>
 
         <!-- ///// Contenu du tableau ///// -->
-        <table class="infraUser scroller">
-          <!-- <tr>
-    <td>CARON</td>
-    <td>Baptiste</td>
-    <td>2,00€</td>
-    <td><input type="checkbox" name = "checkboxvar[]" value="1"></td>
-    </tr> -->
 
 
 
-          <?php
+
+        <?php
           
           for ($i=0; $i < count($_SESSION['listInfraction']); $i++) { 
             echo '<tr>';
-            echo '<td ">'. $_SESSION['listInfraction'] [$i]['Nom'].'</td>';
-            echo '<td ">'. $_SESSION['listInfraction'] [$i]['Prenom'].'</td>';
-            echo '<td ">'. $_SESSION['listInfraction'] [$i]['solde'].'</td>';
-            echo '<td><input type="radio" name="utilisateur" value="'.  $_SESSION['listInfraction'] [$i]['id_utilisateur']. '"></td>';
+            echo '<td class="td1">'. $_SESSION['listInfraction'] [$i]['Nom'].'</td>';
+            echo '<td class="td2">'. $_SESSION['listInfraction'] [$i]['Prenom'].'</td>';
+            echo '<td class="td3">'. $_SESSION['listInfraction'] [$i]['solde'].'</td>';
+            echo '<td class="td4"><input type="radio" name="utilisateur" value="'.  $_SESSION['listInfraction'] [$i]['id_utilisateur']. '"></td>';
           }
 
         ?>
 
-        </table>
-      </section>
+      </table>
+  </section>
   </form>
-
-  </div>
-
-
-
-  <?php
-
-// $checkboxvar[] = $_REQUEST['checkboxvar'];
-
-// if(isset($_POST['submit'])){
-
-//     if(!empty($_POST['checkboxvar'])) {
-
-//         foreach($_POST['checkboxvar'] as $value){
-//             echo "Chosen colour : ".$value.'<br/>';
-//         }
-
-//     }
-
-// }
-?>
 
 
   <!-- ///////////////////////// Nav bar Bottom //////////////////////////////////////////////-->

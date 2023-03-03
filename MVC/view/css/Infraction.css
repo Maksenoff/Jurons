@@ -1,11 +1,7 @@
 
 /**** Placement dans la page ****/
 
-.radioGaga {
-    margin-left: 5%;
-    margin-right: 25%;
-    margin-top: 0.5%;
-}
+
 
 .titreTab,.infraUser {
   margin-left: 5%;
@@ -21,17 +17,17 @@ height: 40em;
 
 
 section {
-  height:40em;
-  width: 950px;
-  margin-top: 100px;
-margin-left: 2.35%;
-padding-right: 2.5%;
-
+  height:50%;
+  width: 60%;
+  margin-top: 10em;
+  margin-left: 20%; 
       overflow-y:auto;
       overflow-x: hidden;
-      border-radius: 5px;
+      
  
 }
+
+
 
 
 
@@ -57,49 +53,49 @@ padding-right: 2.5%;
   background: #555;
 }
 
-/**** Coin arrondi ****/
-#infr {margin-left: 5px;}
 
-#tlCorner{border-radius: 15px 0px 0px 0px;}
-
-#bottomCorner {border-radius: 0px 0px 15px 15px;}
-
-#blCorner {border-radius: 0px 0px 0px 15px;}
-#brCorner {border-radius: 0px 0px 15px 0px;}
-#trCorner {border-radius: 0px 15px 0px 0px;}
 
 /**** Tableaux ****/
+
+.tableau {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.158);
+}
 
 
 /***** Legende du tableau *****/
 
+.legend{
+  background-color: rgba(0, 0, 0, 0.671);
+  color: white;
+  border-radius: 5px 5px 0% 0%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  
+ 
+}
+
+.infraction{
+  padding-top: 10px;
+ 
+}
+
+#infra{
+  background-color: black;
+  padding-left: 10px;
+  margin-left: 5px;
+  color: white;
+  border-radius: 5px;
+  border: hidden;
+}
+
 #trTab2 { 
   background-color: black;
-  position:fixed;
-  width: 890px;
-  height: 50px;
-  padding-top: 10px;
+  color: white;
 }
 
-
-
-#trTab2 th {
-  padding-right: 15px;
-  height: 50px;
-
-}
-
- .radioGaga th{
-
-    border-bottom: 1px solid white;
-    border-collapse: collapse;
-    text-align: center;
-    padding-top: 6px;
-   
-    width: 226px;
-    background-color: rgba(0, 0, 0, 0.726);
-    color: white;
-}
 
 .ligne1 {height: 50px;}
 
@@ -107,8 +103,10 @@ padding-right: 2.5%;
 
 
 tr:nth-child(even) {
-  background-color:rgba(0, 0, 0, 0.555);
+  background-color:rgba(0, 0, 0, 0.377);
 }
+
+
 
 input {
   width: 20px;
@@ -120,7 +118,7 @@ input {
   border-collapse: collapse;
   height: 41px;
   width: 227.5px;
-  background-color: rgba(0, 0, 0, 0.726);
+  background-color: rgba(0, 0, 0, 0.356);
   color: white;
   text-align: center;
   border-left: 1px solid white;
@@ -128,18 +126,6 @@ input {
   
   
 }
-
-.titreTab,.infraUser td{
-  border-collapse: collapse;
-  height: 41px;
-  width: 227.5px;
-  background-color: rgba(0, 0, 0, 0.726);
-  padding-top: 12px;
-  color: white;
-  text-align: center;
-  
-}
-
 
 /**** Fond d'écran ****/
 
@@ -151,9 +137,31 @@ body{
 
 tr {
     display: flex;
-    justify-content: space-around;
-
+    justify-content: flex-start;
+    height: auto;    
 }
+
+.td1{
+  width: 25%;
+  padding-left: 10%;
+}
+
+.td2{
+  width: 25%;
+  padding-left: 5%;
+}
+
+.td3{
+  width: 25%;
+  padding-left: 10%;
+}
+
+.td4{
+  width: 25%;
+  padding-left: 15%;
+}
+
+
 
 /**** Bouton validation ****/
 #holder {margin-top: -6px;}
