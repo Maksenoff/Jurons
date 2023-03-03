@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 01 mars 2023 à 13:58
--- Version du serveur : 10.4.24-MariaDB
--- Version de PHP : 8.1.6
+-- Généré le : ven. 03 mars 2023 à 11:56
+-- Version du serveur : 10.4.27-MariaDB
+-- Version de PHP : 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `balance` (
   `id_infraction` int(11) NOT NULL,
   `dateBalance` varchar(50) NOT NULL,
   `id_balance` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `balance`
@@ -42,7 +42,15 @@ CREATE TABLE `balance` (
 INSERT INTO `balance` (`id_primary`, `id_utilisateur`, `id_infraction`, `dateBalance`, `id_balance`) VALUES
 (1, 1, 1, '01-03-2023', 2),
 (2, 1, 1, '01-03-2023', 2),
-(3, 1, 1, '01-03-2023', 2);
+(3, 1, 1, '01-03-2023', 2),
+(4, 2, 1, '03-03-2023', 1),
+(5, 2, 1, '03-03-2023', 1),
+(6, 2, 1, '03-03-2023', 1),
+(7, 2, 1, '03-03-2023', 1),
+(8, 2, 2, '03-03-2023', 1),
+(9, 2, 1, '03-03-2023', 1),
+(10, 2, 1, '03-03-2023', 1),
+(11, 2, 7, '03-03-2023', 1);
 
 -- --------------------------------------------------------
 
@@ -54,14 +62,23 @@ CREATE TABLE `infraction` (
   `id_infraction` int(11) NOT NULL,
   `libelle` varchar(50) NOT NULL,
   `tarif` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `infraction`
 --
 
 INSERT INTO `infraction` (`id_infraction`, `libelle`, `tarif`) VALUES
-(1, 'petit juron', 0.1);
+(1, 'petit juron', 0.1),
+(2, 'gros juron', 0.3),
+(3, 'geste', 0.7),
+(4, 'rôt', 0.5),
+(5, 'retard 10 min', 0.1),
+(6, 'retard 20 min', 0.2),
+(7, 'retard 30 min', 0.3),
+(8, 'retard 40 min', 0.4),
+(9, 'retard 50 min', 0.5),
+(10, 'retard 60 min', 0.6);
 
 -- --------------------------------------------------------
 
@@ -72,7 +89,7 @@ INSERT INTO `infraction` (`id_infraction`, `libelle`, `tarif`) VALUES
 CREATE TABLE `profil` (
   `id_profil` int(11) NOT NULL,
   `grade` varchar(50) NOT NULL COMMENT 'utilisateur/admin'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `profil`
@@ -97,7 +114,7 @@ CREATE TABLE `utilisateur` (
   `mdp` varchar(50) NOT NULL,
   `solde` float NOT NULL,
   `id_profil` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `utilisateur`
@@ -105,7 +122,14 @@ CREATE TABLE `utilisateur` (
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `Nom`, `Prenom`, `mail`, `loginUser`, `mdp`, `solde`, `id_profil`) VALUES
 (1, 'Maksen', 'ICHALLALEN', 'maksen.ichapp@gmail.com', 'Maksenoff', '123', 20, 1),
-(2, 'Georges', 'ABIDBOL', 'georges.abidbol@gmail.com', 'cowboy', '123', 5000, 2);
+(2, 'Georges', 'ABIDBOL', 'georges.abidbol@gmail.com', 'cowboy', '123', 49.6, 2),
+(3, 'Saudemont', 'Thibaut', 't@t.fr', 'tp', '12345', 110, 1),
+(4, 'Legrand', 'Sebastien', 't@t.fr', 'tp', '12345', 80, 1),
+(5, 'Marchand', 'Julien', 't@t.fr', 'tp', '12345', 80, 1),
+(6, 'Moussa', 'Formateur', 't@t.fr', 'tp', '12345', 110, 1),
+(7, 'Truc', 'Maksen', 't@t.fr', 'tp', '12345', 100, 1),
+(8, 'Truc', 'paul', 't@t.fr', 'tp', '12345', 5, 2),
+(9, 'Truc', 'Florian', 't@t.fr', 'tp', '12345', 150, 2);
 
 --
 -- Index pour les tables déchargées
@@ -146,13 +170,13 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `balance`
 --
 ALTER TABLE `balance`
-  MODIFY `id_primary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_primary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `infraction`
 --
 ALTER TABLE `infraction`
-  MODIFY `id_infraction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_infraction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `profil`
@@ -164,7 +188,7 @@ ALTER TABLE `profil`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Contraintes pour les tables déchargées

@@ -51,6 +51,8 @@
 
   <?php session_start(); ?>
 
+  <section>
+
   <!-- ////////////////////// Tableau 1 /////////////////-->
   <form action="../controller/executeInfraction.php"  method="get" name="validerInf">
     <table class="radioGaga">
@@ -62,12 +64,18 @@
         <th id="tlCorner">
 
           <label for="">Infraction</label>
-          <select name="Infraction" id="infra">
+          <select name="infra" id="infra">
 
-            <option value="pj">Petit Juron</option>
-            <option value="gj">Gros Juron</option>
-            <option value="ge">Geste</option>
-            <option value="ro">Rôt</option>
+            <option value="1">Petit Juron</option>
+            <option value="2">Gros Juron</option>
+            <option value="3">Geste</option>
+            <option value="4">Rôt</option>            
+            <option value="5">retard de 10min</option>
+            <option value="6">retard de 20min</option>
+            <option value="7">retard de 30min</option>
+            <option value="8">retard de 40min</option>
+            <option value="9">retard de 50min</option>
+            <option value="10">retard de 60min</option>
 
           </select>
 
@@ -77,22 +85,22 @@
 
         <!-- //////////  Retard /////////////// -->
 
-        <th>
+        <!-- <th>
           <label for="">Retard</label>
-          <select name="Retard" id="retard">
+          <select name="infra" id="infra">
 
-            <option value="0">0</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
-            <option value="60">60</option>
+            <option value="">0</option>
+            <option value="5">10</option>
+            <option value="6">20</option>
+            <option value="7">30</option>
+            <option value="8">40</option>
+            <option value="9">50</option>
+            <option value="10">60</option>
 
 
           </select>
 
-        </th>
+        </th> -->
 
 
 
@@ -100,9 +108,9 @@
 
           <!-- ////////////// Bouton "Valider" //////////////-->
 
-          <div id="holder" >
+                <!-- <div id="holder" > -->
 
-            <input class="button " type="submit" value="Valider">✓
+      <input class="button " type="submit" value="Valider">
 
               <!-- <p class="btnText" >Valider<p> -->
 
@@ -110,8 +118,8 @@
 
                 <!-- <p class="btnText2"></p> -->
               <!-- </div> -->
-            </input>
-          </div>
+            
+                <!-- </div> -->
 
         </th>
 
@@ -127,7 +135,7 @@
 
     <!-- ////////////////////// Tableau 2 /////////////////-->
     <div class="tabplusBout">
-      <section>
+      
 
         <!-- ////////// Légende du tableau //////////-->
         <table class="titreTab">
@@ -146,7 +154,7 @@
     <td>Baptiste</td>
     <td>2,00€</td>
     <td><input type="checkbox" name = "checkboxvar[]" value="1"></td>
-</tr> -->
+    </tr> -->
 
 
 
@@ -157,7 +165,7 @@
             echo '<td ">'. $_SESSION['listInfraction'] [$i]['Nom'].'</td>';
             echo '<td ">'. $_SESSION['listInfraction'] [$i]['Prenom'].'</td>';
             echo '<td ">'. $_SESSION['listInfraction'] [$i]['solde'].'</td>';
-            echo '<td><input type="checkbox" name = "checkboxvar[]" value="'. $i. '"></td>';
+            echo '<td><input type="radio" name="utilisateur" value="'.  $_SESSION['listInfraction'] [$i]['id_utilisateur']. '"></td>';
           }
 
         ?>
@@ -174,17 +182,17 @@
 
 // $checkboxvar[] = $_REQUEST['checkboxvar'];
 
-if(isset($_POST['submit'])){
+// if(isset($_POST['submit'])){
 
-    if(!empty($_POST['checkboxvar'])) {
+//     if(!empty($_POST['checkboxvar'])) {
 
-        foreach($_POST['checkboxvar'] as $value){
-            echo "Chosen colour : ".$value.'<br/>';
-        }
+//         foreach($_POST['checkboxvar'] as $value){
+//             echo "Chosen colour : ".$value.'<br/>';
+//         }
 
-    }
+//     }
 
-}
+// }
 ?>
 
 

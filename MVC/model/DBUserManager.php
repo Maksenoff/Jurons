@@ -27,15 +27,10 @@ public static function readUser():array{
     
     return $array;
 }
-public static function updateUser(): bool
+public static function updateUser($nom, $prenom, $mail, $loginUser, $solde, $id): bool
 {
     // modification des données
-    $nom = $_POST['Nom'];
-    $prenom = $_POST['Prenom'];
-    $mail = $_POST['Mail'];
-    $loginUser = $_POST['LoginUser'];
-    $solde = $_POST['Solde'];
-    $id = $_POST['ID'];
+  
     $sql = "UPDATE utilisateur SET `Nom`='$nom',`Prenom`='$prenom',`mail`='$mail',`loginUser`='$loginUser',`solde`='$solde' WHERE `id_utilisateur`=$id;";
     $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $stmt = $bdd->prepare($sql);
@@ -86,6 +81,26 @@ public static function selectCollabo($id_balance): array{
             $array = $stmt->fetchAll(PDO::FETCH_ASSOC);    
     
     return $array;
+}
+
+public static function selectSoldeUtilisateur($id_utilisateur): array{
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+     
+            $sql = "SELECT `id_utilisateur`, `Nom`, `Prenom`,`solde` FROM `utilisateur` WHERE `id_utilisateur` = $id_utilisateur";
+            $stmt= $bdd->query($sql);
+            $array = $stmt->fetchAll(PDO::FETCH_ASSOC);    
+    
+    return $array;
+}
+
+public static function updateSoldeUser($solde, $id_utilisateur): bool{
+    // modification des données
+  
+    $sql = "UPDATE `utilisateur` SET `solde`='$solde' WHERE `id_utilisateur`= $id_utilisateur";
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $stmt = $bdd->prepare($sql);
+    $update = $stmt->execute();
+    return $update;
 }
 
 }

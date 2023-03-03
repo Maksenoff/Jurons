@@ -53,7 +53,7 @@ public static function deleteInfraction() : bool {
     
 }
 
-//à tester
+
 public static function historique():array {
 
         $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -72,11 +72,23 @@ public static function statCamenbert() {
     
 }
 
+public static function selectTarif($id_infraction): array  {
+
+    $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        
+    $sql = "SELECT * FROM `infraction` WHERE `id_infraction` = $id_infraction";
+        
+    $stmt= $bdd->query($sql);
+    $array = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $array;
+}
+
 }
 
 //test
 
-// $infraction = new Infraction("gros juron", 0.30);
+// $infraction = new Infraction("retard 60 min", 0.60);
 // InfractionManager::createInfraction($infraction);
 
 // print_r(InfractionManager::historique());
