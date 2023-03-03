@@ -42,4 +42,4 @@ $listeSolde = getSoldes();
 
 $listePrenom = getPrenoms();
 
-
+$sommeAutre = getSoldesAutre();

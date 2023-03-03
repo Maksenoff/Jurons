@@ -72,7 +72,7 @@
           <input required="password" name="mdp" type="password">
           <label>Mot de passe </label>
         </div>
-        <input type="submit" style="width : 10em" name="submit" class="btn btn-outline-success" value="Inscritption">
+        <input type="submit" style="width : 10em" name="submit" class="btn btn-outline-success" value="Inscription">
       </form>
     </div>
   </div>

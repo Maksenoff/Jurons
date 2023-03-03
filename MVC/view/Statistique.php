@@ -55,35 +55,6 @@
   <!--   -->
 
 
-
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand playfaire text-light" href="../View/Nav.html">
-        <h2>La Boîte à Jurons</h2>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav menu">
-          <a class="nav-link active text-light" aria-current="page" href="#">Infractions</a>
-          <a class="nav-link active text-light" aria-current="page" href="#">Statistiques</a>
-          <a class="nav-link active text-light" aria-current="page" href="#">Historique</a>
-        </div>
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
-
-          <a href="../view/login.php"><button class="btnav"> Connexion
-            </button></a>
-          <a href="../view/SignUp.php"><button class="btnav"> Inscription
-            </button></a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
   <H1>Parlons Chatistique</H1>
   <div class="MEP">
  
@@ -92,9 +63,9 @@
   
     <div class="cercle">
       <pie-chart data="
-            <?php echo $listeSolde ?>
+            <?php echo $listeSolde ?>;    <?php echo $sommeAutre ?>
 
-            " gap="0.01" labels=" <?php echo $listePrenom ?>"></pie-chart>
+            " gap="0.01" labels=" <?php echo $listePrenom ?>; Autre"></pie-chart>
     </div>
     <img src="./img/chat.png" alt="" class="portraitChat">
   </div>

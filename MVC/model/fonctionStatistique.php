@@ -104,6 +104,28 @@ function createAscendingTable2($user , $user2)
 
 
 
+function getSoldesAutre(): float
+{
+    $test = array();
+    $con = mysqli_connect("localhost", "root", "", "mld_jurons");
+    if (!$con) {
+        echo "connexion échouée";
+    }
+    $req = mysqli_query($con, "SELECT solde FROM utilisateur");
+
+    foreach ($req as $data) {
+        $solde[] = $data['solde'];
+    }
+
+   
+    $solde = createAscendingTable($solde);
+
+    for ($i = 8; $i <= sizeof($solde); $i++) {
+        $sommeAutre = $sommeAutre + $solde[$i];
+    }
+
+    return $sommeAutre;
+}
 
 
 
