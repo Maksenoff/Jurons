@@ -1,22 +1,22 @@
 <?php
 require('../model/Config.php');
+include_once "../model/DBUserManager.php";
+session_start();
 
-
-
-if (isset($_POST['loginUser'])){
-  $username = stripslashes($_REQUEST['loginUser']);
-  $username = mysqli_real_escape_string($conn, $username);
-  $password = stripslashes($_REQUEST['mdp']);
-  $password = mysqli_real_escape_string($conn, $password);
-    $query = "SELECT * FROM `utilisateur` WHERE loginUser='$username' and mdp='$password'";
-  $result = mysqli_query($conn,$query);
-  $rows = mysqli_num_rows($result);
-  if($rows==True){
-      $_SESSION['loginUser'] = $username;
-      header("Location:../View/Home.html");
-  }else{
-    $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
-  }
+$loginUser = $_POST['loginUser'];
+$mdp = $_POST['mdp'];
+// $loginUser = "TEST";
+// $mdp = "mdp";
+$verif = DBUserManager::Login($loginUser,$mdp);
+var_dump($verif);
+if ($verif) {
+    header("Location:../View/home.php");
+}else {
+    header("Location:../View/login.php");
 }
+
+
+
+?>
 
 

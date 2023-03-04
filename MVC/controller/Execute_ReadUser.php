@@ -4,6 +4,6 @@ session_start();
 $_SESSION['utilisateur'] = DBUserManager::readUser();
 header('Location:../View/UserManager.php');
 
-
+ 
 
 ?>

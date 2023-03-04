@@ -2,7 +2,7 @@
 include_once "../model/Infraction.class.php";
 
 
-class InfractionManager {
+class InfractionManager { 
 
 //insertion dans la bdd d'un objet infraction
 public static function createInfraction(Infraction $infraction ) : bool {
@@ -20,15 +20,11 @@ public static function createInfraction(Infraction $infraction ) : bool {
 }
 
 //modification d'une infraction dans la bdd
-public static function updateInfraction() : bool {
+public static function updateInfraction($id,$libelle,$tarif) : bool {
     $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-    
-    $libelle = $_POST['Libelle'];
-    $tarif = $_POST['Tarif'];
-    $id_infraction = $_POST['id_infraction'];
 
-    $sql=("UPDATE `infraction` SET `libelle`='$libelle',`tarif`='$tarif' WHERE `id_infraction`='$id_infraction'");
+    $sql=("UPDATE `infraction` SET `libelle`='$libelle',`tarif`='$tarif' WHERE `id_infraction`='$id'");
 
 
     $stmt= $bdd->prepare($sql);
@@ -39,13 +35,13 @@ public static function updateInfraction() : bool {
 }
 
 
-public static function deleteInfraction() : bool {
+public static function deleteInfraction($id) : bool {
     $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
     $status = false;
-    $id_infraction = $_POST['id_infraction'];
+    
 
-    $sql = "DELETE FROM `infraction` WHERE `id_infraction` = '$id_infraction'";
+    $sql = "DELETE FROM `infraction` WHERE `id_infraction` = '$id'";
     $stmt= $bdd->prepare($sql);
     $status = $stmt->execute();
 
@@ -54,7 +50,7 @@ public static function deleteInfraction() : bool {
 }
 
 
-public static function historique():array {
+public static function ReadInfraction():array {
 
         $bdd = new PDO('mysql:host=localhost;dbname=mld_jurons;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         

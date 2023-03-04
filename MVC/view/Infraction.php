@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-  <title>Document</title>
+  <title>Infraction</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
@@ -28,7 +28,7 @@
   <!-- ///////////////////////// Nav bar Top //////////////////////////////////////////////-->
   <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand playfaire text-light" href="../View/Home.html">
+      <a class="navbar-brand playfaire text-light" href="../View/Home.php">
         <h2>La Boîte à Jurons</h2>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -43,10 +43,6 @@
           <a class="nav-link active text-light" aria-current="page"
             href="../controller/executeHistorique.php">Historique</a>
         </div>
-        <a href="../view/login.php"><button class="btnav"> Connexion
-          </button></a>
-        <a href="../view/SignUp.php"><button class="btnav"> Inscription
-          </button></a>
         <a href="../view/Admin.html"><button class="btnav"> Admin
           </button></a>
       </div>
@@ -177,7 +173,7 @@
               <a class="nav-link me-5" href="#">Service Client</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-5" href="../View/Paiement.html">Faire un Don</a>
+              <a class="nav-link me-5" href="../View/Paiement.php">Faire un Don</a>
             </li>
             <li class="nav-item">
               <a class="nav-link me-5" href="#">Conditions générales d'utilisation</a>

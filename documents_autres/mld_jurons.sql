@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 03 mars 2023 à 11:56
+-- Généré le : sam. 04 mars 2023 à 20:48
 -- Version du serveur : 10.4.27-MariaDB
--- Version de PHP : 7.4.33
+-- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,17 +40,18 @@ CREATE TABLE `balance` (
 --
 
 INSERT INTO `balance` (`id_primary`, `id_utilisateur`, `id_infraction`, `dateBalance`, `id_balance`) VALUES
-(1, 1, 1, '01-03-2023', 2),
-(2, 1, 1, '01-03-2023', 2),
-(3, 1, 1, '01-03-2023', 2),
-(4, 2, 1, '03-03-2023', 1),
-(5, 2, 1, '03-03-2023', 1),
-(6, 2, 1, '03-03-2023', 1),
-(7, 2, 1, '03-03-2023', 1),
-(8, 2, 2, '03-03-2023', 1),
-(9, 2, 1, '03-03-2023', 1),
-(10, 2, 1, '03-03-2023', 1),
-(11, 2, 7, '03-03-2023', 1);
+(16, 11, 6, '04-03-2023', 1),
+(17, 11, 1, '04-03-2023', 1),
+(18, 12, 1, '04-03-2023', 1),
+(19, 12, 10, '04-03-2023', 1),
+(20, 16, 6, '04-03-2023', 1),
+(21, 14, 4, '04-03-2023', 1),
+(22, 13, 1, '04-03-2023', 1),
+(23, 10, 1, '04-03-2023', 1),
+(24, 10, 1, '04-03-2023', 1),
+(25, 17, 10, '04-03-2023', 1),
+(26, 17, 10, '04-03-2023', 1),
+(27, 15, 9, '04-03-2023', 1);
 
 -- --------------------------------------------------------
 
@@ -121,15 +122,14 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `Nom`, `Prenom`, `mail`, `loginUser`, `mdp`, `solde`, `id_profil`) VALUES
-(1, 'Maksen', 'ICHALLALEN', 'maksen.ichapp@gmail.com', 'Maksenoff', '123', 20, 1),
-(2, 'Georges', 'ABIDBOL', 'georges.abidbol@gmail.com', 'cowboy', '123', 49.6, 2),
-(3, 'Saudemont', 'Thibaut', 't@t.fr', 'tp', '12345', 110, 1),
-(4, 'Legrand', 'Sebastien', 't@t.fr', 'tp', '12345', 80, 1),
-(5, 'Marchand', 'Julien', 't@t.fr', 'tp', '12345', 80, 1),
-(6, 'Moussa', 'Formateur', 't@t.fr', 'tp', '12345', 110, 1),
-(7, 'Truc', 'Maksen', 't@t.fr', 'tp', '12345', 100, 1),
-(8, 'Truc', 'paul', 't@t.fr', 'tp', '12345', 5, 2),
-(9, 'Truc', 'Florian', 't@t.fr', 'tp', '12345', 150, 2);
+(10, 'ICHALLALEN', 'Maksen', 'maksen@gmail.com', 'Maksenoff', '0bcabf0e4e8bc5145eee3a995d0bb4d3406a876d', 0.2, 1),
+(11, 'User', 'User', 'User@gmail.com', 'User', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 0.3, 2),
+(12, 'Dupont', 'Fabrice', 'fab@gmail.com', 'Fabou', '6db96080c8d03b3ee9b03e0e3676c04bec5cc80b', 0.7, 2),
+(13, 'Panet', 'Baptiste', 'baptiste@gmail.com', 'Baptou', '8a09756d48861d0c1884ca0847275f0b7880354c', 0.1, 2),
+(14, 'Lefevre', 'Haziz', 'haziz@gmail.com', 'Hazou', 'Haziz', 0.5, 2),
+(15, 'Leclerc', 'Julien', 'cypherus@gmail.com', 'Cypherus', 'Julien', 0.5, 2),
+(16, 'Vanhems', 'Louis', 'Louis@gmail.com', 'Akhoya', 'Louis', 0.2, 2),
+(17, 'Dupont-de-liognnes', 'Xavier', 'terrasse@famille.fr', 'CouleurDeDalle', 'Xavier', 1.2, 2);
 
 --
 -- Index pour les tables déchargées
@@ -170,7 +170,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `balance`
 --
 ALTER TABLE `balance`
-  MODIFY `id_primary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_primary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT pour la table `infraction`
@@ -188,7 +188,7 @@ ALTER TABLE `profil`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Contraintes pour les tables déchargées

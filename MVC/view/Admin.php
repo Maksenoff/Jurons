@@ -1,77 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="../view/css/LoginInscriptionStyle.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link type="text/css" rel="stylesheet" href="./css/NavStyle.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../view/css/LoginInscriptionStyle.css">
-
-
-  <title>MDP oublié</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="./css/NavStyle.css">
+    <link rel="stylesheet" href="../view/css/AdminStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <title>Gestionnaire</title>
 </head>
-
 <body class="playfaire">
-<?php session_start();?>
-<!-- HEADER -->
-<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand playfaire text-light">
-        <h2>La Boîte à Jurons</h2>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="Nav3">
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <a href="../view/login.php"><button class="btnav"> Connexion
-            </button></a>
-          <a href="../view/SignUp.php"><button class="btnav"> Inscription
-            </button></a>
-
-            
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
-      <div class="MEP">
-        <img src="./img/reine.png" alt="" class="portraitReine">
-        <div class="login-box">
-          <p>Mot de passe oublié</p>
-          <form action="./login.php">
-            <div class="user-box">
-              <input required="Email" name="Email" type="Email">
-              <label>Email</label>
+  <?php session_start();?>
+       <!-- HEADER -->
+       <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand playfaire text-light" href="../View/Home.php"><h2>La Boîte à Jurons</h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav menu">
+              <a class="nav-link active text-light" aria-current="page" href="../controller/executeInfraction.php">Infractions</a>
+              <a class="nav-link active text-light" aria-current="page" href="../view/Statistique.php">Statistiques</a>
+              <a class="nav-link active text-light" aria-current="page" href="../controller/executeHistorique.php">Historique</a>
             </div>
-
-            <a href="./Login.php">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Ok
-            </a>
-          </form><br>
-
+            <a href="../view/login.php"><button class="btnav"> Déconnexion
+            </button></a>
+          </div>
         </div>
-      </div>
+      </nav>
+      <!--   -->
+          <main>
+            <div class="padTitre"><h1 class="playfaire titre">Gestionnaire</h1></div>
+            <div class="cards-list">
+  
+                <a href="../controller/Execute_ReadUser.php"><div class="card 1">
+                  <div class="card_image"> <img src="../view/img/Parametres.png" /> </div>
+                  <div class="card_title title-white">
+                    <p>User Manager</p>
+                  </div>
+                </div></a>
+                
+                  <a href="../controller/Execute_InfractionRead.php"><div class="card 2">
+                  <div class="card_image">
+                    <img src="../view/img/Parametres.png" />
+                    </div>
+                  <div class="card_title title-white">
+                    <p>Infractions Manager</p>
+                  </div>
+                </div> </a>               
+                </div>
+            
 
 
-
-
-      <!-- FOOTER -->
-      <footer class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+          </main>
+          <!-- FOOTER -->
+          <footer class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -88,7 +75,7 @@
                     <a class="nav-link me-5" href="#">Service Client</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link me-5">Faire un Don</a>
+                    <a class="nav-link me-5" href="../View/Paiement.php">Faire un Don</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link me-5" href="#">Conditions générales d'utilisation</a>
@@ -99,11 +86,6 @@
             </div>
           </footer>
           <!--  -->
-  
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
-
+    
 </body>
-
 </html>

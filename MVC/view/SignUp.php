@@ -17,14 +17,15 @@
   <title>Inscription</title>
 </head>
 
-<body>
+<body class="playfaire">
+<?php session_start();?>
 
 
 
 <!-- HEADER -->
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand playfaire text-light" href="../View/Home.html" >
+      <a class="navbar-brand playfaire text-light">
         <h2>La Boîte à Jurons</h2>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -35,8 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <a href="../view/login.php"><button class="btnav"> Connexion
             </button></a>
-          <a href="../view/SignUp.php"><button class="btnav"> Inscription
-            </button></a>
+          
 
             
         </div>
@@ -72,7 +72,9 @@
           <input required="password" name="mdp" type="password">
           <label>Mot de passe </label>
         </div>
+        <center>
         <input type="submit" style="width : 10em" name="submit" class="btn btn-outline-success" value="Inscription">
+        </center>
       </form>
     </div>
   </div>
@@ -104,7 +106,7 @@
               <a class="nav-link me-5" href="#">Service Client</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-5" href="../View/Paiement.html">Faire un Don</a>
+              <a class="nav-link me-5">Faire un Don</a>
             </li>
             <li class="nav-item">
               <a class="nav-link me-5" href="#">Conditions générales d'utilisation</a>

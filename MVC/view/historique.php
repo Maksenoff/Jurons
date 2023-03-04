@@ -15,7 +15,7 @@
 
 
 
-  <title>historique</title>
+  <title>Historique</title>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 <!-- HEADER -->
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand playfaire text-light" href="../View/Home.html"><h2>La Boîte à Jurons</h2></a>
+              <a class="navbar-brand playfaire text-light" href="../View/Home.php"><h2>La Boîte à Jurons</h2></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -33,12 +33,8 @@
                   <a class="nav-link active text-light" aria-current="page" href="../view/Statistique.php">Statistiques</a>
                   <a class="nav-link active text-light" aria-current="page" href="../controller/executeHistorique.php">Historique</a>
                 </div>
-                <a href="../view/login.php"><button class="btnav"> Connexion
-                </button></a>
-                <a href="../view/SignUp.php"><button class="btnav"> Inscription
-                </button></a>
-                <a href="../view/Admin.html"><button class="btnav"> Admin
-                </button></a>
+                <a href="../controller/Execute_Admin.php"><button class="btnav"> Admin
+      </button></a>
               </div>
             </div>
           </nav>
@@ -108,7 +104,7 @@
                     <a class="nav-link me-5" href="#">Service Client</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link me-5" href="../View/Paiement.html">Faire un Don</a>
+                    <a class="nav-link me-5" href="../View/Paiement.php">Faire un Don</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link me-5" href="#">Conditions générales d'utilisation</a>

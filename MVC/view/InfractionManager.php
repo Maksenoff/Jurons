@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link type="text/css" rel="stylesheet" href="./css/NavStyle.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../view/css/UserManagerStyle.css">
-  <title>UserManager</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="./css/NavStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/ManagerInfractionStyle.css">
+    <title>Infraction Manager</title>
 </head>
-
 <body class="playfaire">
-<?php session_start(); ?>
+<?php session_start();?>
 <!-- HEADER -->
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-              <a class="navbar-brand playfaire text-light" href="../View/Home.php"><h2>La Boîte à Jurons</h2></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav menu">
-                  <a class="nav-link active text-light" aria-current="page" href="../view/Infraction.php">Infractions</a>
-                  <a class="nav-link active text-light" aria-current="page" href="../view/Statistique.php">Statistiques</a>
-                  <a class="nav-link active text-light" aria-current="page" href="../view/historique.php">Historique</a>
-                </div>
-                <a href="../controller/Execute_Logout.php"><button class="btnav"> Déconnexion
+  <div class="container-fluid">
+    <a class="navbar-brand playfaire text-light" href="../View/Home.php"><h2>La Boîte à Jurons</h2></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav menu">
+        <a class="nav-link active text-light" aria-current="page" href="../controller/executeInfraction.php">Infractions</a>
+        <a class="nav-link active text-light" aria-current="page" href="../view/Statistique.php">Statistiques</a>
+        <a class="nav-link active text-light" aria-current="page" href="../controller/executeHistorique.php">Historique</a>
+      </div>
+      <a href="../controller/Execute_Logout.php"><button class="btnav"> Déconnexion
       </button></a>
       <a href="../controller/Execute_Admin.php"><button class="btnav"> Admin
       </button></a>
-              </div>
-            </div>
-          </nav>
-          <!--   -->
-  <main class="flexmain">   
+    </div>
+  </div>
+</nav>
+<!--   -->
+<main class="flexmain">   
     <div class="flexdiv2">
         <div class="d-flex justify-content-center">
           
@@ -45,25 +43,18 @@
             <table class="tableau scroller">
               <thead>
                 <tr class="tr-legend">
-                  <th class="th th-id">ID_Utilisateur</th>
-                  <th class="th th-nom">Nom</th>
-                  <th class="th th-prenom">Prénom</th>
-                  <th class="th th-mail">Mail</th>
-                  <th class="th th-pseudo">Pseudonyme</th>
-                  <th class="th th-balance">Solde</th>
+                  <th class="th th-id">ID_Infraction</th>
+                  <th class="th th-nom">Libelle</th>
+                  <th class="th th-prenom">Tarif</th>
                 </tr>
               </thead>
               <tbody>
               
-                <?php for ($i = 0; $i < count($_SESSION['utilisateur']); $i++) {
+                <?php for ($i = 0; $i < count($_SESSION['infraction']); $i++) {
                   echo '<tr>';
-                  echo '<td class="th th-id">' . $_SESSION['utilisateur'][$i]['id_utilisateur'] . '</td>';
-                  echo '<td class="th th-prenom">' . $_SESSION['utilisateur'][$i]['Nom'] . '</td>';
-                  echo '<td class="th th-nom">' . $_SESSION['utilisateur'][$i]['Prenom'] . '</td>';
-
-                  echo '<td class="th th-mail">' . $_SESSION['utilisateur'][$i]['Mail'] . '</td>';
-                  echo '<td class="th th-pseudo">' . $_SESSION['utilisateur'][$i]['loginUser'] . '</td>';
-                  echo '<td class="th th-balance">' . $_SESSION['utilisateur'][$i]['solde'] . '</td>';
+                  echo '<td class="th th-id">' . $_SESSION['infraction'][$i]['id_infraction'] . '</td>';
+                  echo '<td class="th th-prenom">' . $_SESSION['infraction'][$i]['libelle'] . '</td>';
+                  echo '<td class="th th-nom">' . $_SESSION['infraction'][$i]['tarif'] . '</td>';
                   echo '</tr>';
                 } ?>
               </tbody>
@@ -74,75 +65,35 @@
     <div class="flexdiv1">
     <div class="ptop pbot">
         <div class="login-box">
-          <form action = "../controller/Execute_UserCreate.php" method="Get">
+          <form action = "../controller/Execute_InfractionCreate.php" method="post">
             <div class="user-box">
-              <input type="Name" name="Nom" required="">
-              <label>Nom</label>
+              <input type="Name" name="Libelle" required="">
+              <label>Libelle</label>
             </div>
             <div class="user-box">
-              <input type="Name" name="Prenom" required="">
-              <label>Prénom</label>
-            </div>
-            <div class="user-box">
-              <input type="Name" name="Pseudo" required="">
-              <label>Pseudonyme</label>
-            </div>
-            <div class="user-box">
-              <input type="mail" name="Mail" required="">
-              <label>Mail</label>
-            </div>
-            <div class="user-box">
-              <input type="number" name="Solde" required="">
-              <label>Solde</label>
-            </div>
-            <div class="user-box">
-              <input type="password" name="mdp" required="">
-              <label>Password</label>
+              <input type="number" name="Tarif" required="">
+              <label>Tarif</label>
             </div>
             <center> 
             <input type="submit" style="width : 10em" name="submit" class="btn btn-outline-success" value="Créer">
         </center>
           </form>
-        </div>
-        <div class="login-box2 mtop mbot">
-    <form action="../controller/Execute_UserReset.php" method="post">
-      <div class="user-box2">
-        <input type="text" name="ID" required="">
-        <label>ID</label>
-      </div>
-      <center>
-      <input type="submit" style="width : 10em" name="submit" class="btn btn-outline-info" value="Mettre à Zéro">
-      </center>
-    </form>
-  </div>
-        
+        </div>       
       </div>
       <div class="ptop ">
     <div class="login-box1 ">
-      <form action="../controller/Execute_UserUpdate.php" method="post">
+      <form action="../controller/Execute_InfractionUpdate.php" method="post">
       <div class="user-box1">
-        <input type="text" name="ID" required="">
-        <label>ID</label>
-      </div>
+              <input type="number" name="ID" required="">
+              <label>ID</label>
+            </div>
         <div class="user-box1">
-          <input type="text" name="Nom" required="">
-          <label>Nom</label>
+          <input type="text" name="Libelle" required="">
+          <label>Libelle</label>
         </div>
         <div class="user-box1">
-          <input type="text" name="Prenom" required="">
-          <label>Prénom</label>
-        </div>
-        <div class="user-box1">
-          <input type="text" name="LoginUser" required="">
-          <label>Pseudonyme</label>
-        </div>
-        <div class="user-box1">
-          <input type="mail" name="Mail" required="">
-          <label>Mail</label>
-        </div>
-        <div class="user-box1">
-          <input type="number" name="Solde" required="">
-          <label>Solde</label>
+          <input type="number" name="Tarif" required="">
+          <label>Tarif</label>
         </div>
         <center>
         <input type="submit" style="width : 10em" name="submit" class="btn btn-outline-warning" value="Mettre à Jour">
@@ -150,7 +101,7 @@
       </form>
     </div>
     <div class="login-box2 mtop mbot">
-    <form action="../controller/Execute_UserDelete.php" method="post">
+    <form action="../controller/Execute_InfractionDelete.php" method="post">
       <div class="user-box2">
         <input type="text" name="ID" required="">
         <label>ID</label>
@@ -163,12 +114,8 @@
   </div>  
     </div>
   </main>
-
-
-
-
-  <!-- FOOTER -->
-  <footer class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+          <!-- FOOTER -->
+          <footer class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -196,7 +143,6 @@
             </div>
           </footer>
           <!--  -->
-
+    
 </body>
-
 </html>

@@ -10,12 +10,9 @@ session_start();
 $id_utilisateur = $_GET['utilisateur'];
 $id_infraction = $_GET['infra'];
 
+
 //On affiche la liste des utilisateurs
 $_SESSION['listInfraction'] = DBUserManager::readUser();
-
-//On afficher les infractions
-$_SESSION['menuInfractions'] = InfractionManager::historique();
-
 
 header('Location: ../view/Infraction.php');
 

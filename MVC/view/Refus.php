@@ -1,5 +1,3 @@
-<?php include_once "../controller/executeStatistique.php"; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,16 +11,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/StatistiqueStyle.css">
+  <link rel="stylesheet" href="./css/Refus.css">
 
 
-  <title>Statistiques</title>
+  <title>Refus</title>
 
   <script src="./css/app.js" defer></script>
 
 </head>
 
-<body>
+<body class="playfaire">
 
 
   <!-- HEADER -->
@@ -49,22 +47,18 @@
     </div>
   </nav>
   <!--   -->
+<div class="fumee mbot">
+<h1>Tu ne vas pas m'emfumer</h1>
+<h2 class="font-text-h2">Tu n'est pas admin !</h2>
+
+<img src="./img/Absolem.jpg" alt="" class="Absolem">
 
 
-  <H1>Parlons Chatistique</H1>
-  <div class="MEP mbot">
- 
+
+</div>
 
 
-  
-    <div class="cercle">
-      <pie-chart data="
-            <?php echo $listeSolde ?>;    <?php echo $sommeAutre ?>
 
-            " gap="0.01" labels=" <?php echo $listePrenom ?>; Autre"></pie-chart>
-    </div>
-    <img src="./img/chat.png" alt="" class="portraitChat">
-  </div>
 
   <!-- FOOTER -->
   <footer class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
