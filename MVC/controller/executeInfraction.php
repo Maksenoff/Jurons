@@ -14,12 +14,16 @@ $id_infraction = $_GET['infra'];
 //On affiche la liste des utilisateurs
 $_SESSION['listInfraction'] = DBUserManager::readUser();
 
+//On afficher les infractions
+$_SESSION['menuInfractions'] = InfractionManager::ReadInfraction();
+
 header('Location: ../view/Infraction.php');
 
 //On créer des infractions
 
 $today = date("d-m-Y");
-$balance = new Balance($id_utilisateur, $id_infraction, $today , 1);
+$collabo = $_SESSION['User'][0]['id_utilisateur'];
+$balance = new Balance($id_utilisateur, $id_infraction, $today , $collabo);
 DBBalanceManager::createBalance($balance);
 
 //On modifie le solde de l'utilisateur en fonction de l'infraction
