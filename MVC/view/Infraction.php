@@ -16,6 +16,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
   <title>Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script src="../view/ajax.js"></script>
+
+
 </head>
 
 <body>
@@ -55,6 +61,7 @@
 
     <!-- ////////////////////// Tableau 1 /////////////////-->
     <form action="../controller/executeInfraction.php" method="get" name="validerInf">
+     
       <table class="tableau ">
 
         <!-- ////////// Infraction /////////////// -->
@@ -107,8 +114,8 @@
 
             <!-- ////////////// Bouton "Valider" //////////////-->
 
-            <input class="button " type="submit" value="Valider">
-
+            <input class="submit" type="submit" value="Valider">
+            
           </th>
 
         </tr> 
@@ -141,7 +148,8 @@
 
       </table>
   </section>
-  </form>
+
+</form>
 
 
   <!-- ///////////////////////// Nav bar Bottom //////////////////////////////////////////////-->
