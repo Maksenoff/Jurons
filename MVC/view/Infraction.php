@@ -58,10 +58,10 @@
       <table class="tableau ">
 
         <!-- ////////// Infraction /////////////// -->
-
+        <!-- sélecteur infraction en dur -->
         <tr class="legend">
 
-          <th class="infraction" >
+          <!-- <th class="infraction" >
 
             <label for="">Infraction</label>
             <select name="infra" id="infra">
@@ -79,7 +79,28 @@
 
             </select>
 
+          </th> -->
+
+          <!-- essai sélecteur infraction dynamique -->
+
+          <th class="infraction" >
+
+            <label for="">Infraction</label>
+            <select name="infra" id="infra">
+
+             <?php
+
+              for ($i=0; $i < count($_SESSION['menuInfractions']) ; $i++) { 
+                echo '<option value="'. $_SESSION['menuInfractions'][$i]['id_infraction']. '">'. $_SESSION['menuInfractions'][$i]['libelle']. '</option>';
+              }
+
+             ?>
+
+            </select>
+
           </th>
+
+
 
 
           <th id=trCorner>
