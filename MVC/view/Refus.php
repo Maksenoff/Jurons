@@ -49,7 +49,7 @@
   <!--   -->
 <div class="fumee mbot">
 <h1>Tu ne vas pas m'emfumer</h1>
-<h2 class="font-text-h2">Tu n'est pas admin !</h2>
+<h2 class="font-text-h2">Tu n'es pas admin !</h2>
 
 <img src="./img/Absolem.jpg" alt="" class="Absolem">
 
